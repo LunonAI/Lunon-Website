@@ -25,23 +25,23 @@ export function Header() {
       <div className="container mx-auto h-16 px-4">
         <div className="relative flex h-full items-center">
           {/* LOGO */}
-          <div className="flex items-center gap-2">
+          <a href="/" className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity">
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-foreground">
               <span className="font-mono text-lg font-bold text-white">S</span>
             </div>
             <span className="text-xl font-bold tracking-tight">Stratos</span>
-          </div>
+          </a>
 
           {/* DESKTOP NAV - Absolutely centered */}
           <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 md:flex">
-            <a href="#how-it-works" className="relative text-sm font-medium text-muted-foreground transition-colors hover:text-foreground after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-[#AC9776] after:transition-all hover:after:w-full">
+            <a href="/#how-it-works" className="relative text-sm font-medium text-muted-foreground transition-colors hover:text-foreground after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-[#AC9776] after:transition-all hover:after:w-full">
               How It Works
             </a>
-            <a href="#features" className="relative text-sm font-medium text-muted-foreground transition-colors hover:text-foreground after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-[#AC9776] after:transition-all hover:after:w-full">
+            <a href="/#features" className="relative text-sm font-medium text-muted-foreground transition-colors hover:text-foreground after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-[#AC9776] after:transition-all hover:after:w-full">
               Features
             </a>
-            <a href="#clients" className="relative text-sm font-medium text-muted-foreground transition-colors hover:text-foreground after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-[#AC9776] after:transition-all hover:after:w-full">
-              Clients
+            <a href="/#integrations" className="relative text-sm font-medium text-muted-foreground transition-colors hover:text-foreground after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-[#AC9776] after:transition-all hover:after:w-full">
+              Integrations
             </a>
           </nav>
 
@@ -90,14 +90,14 @@ export function Header() {
       {mobileMenuOpen && (
         <div className="border-t border-border bg-white md:hidden">
           <nav className="container mx-auto flex flex-col gap-4 px-4 py-6">
-            <a href="#how-it-works" className="relative text-sm font-medium text-muted-foreground transition-colors hover:text-foreground after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-[#AC9776] after:transition-all hover:after:w-full">
+            <a href="/#how-it-works" className="relative text-sm font-medium text-muted-foreground transition-colors hover:text-foreground after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-[#AC9776] after:transition-all hover:after:w-full">
               How It Works
             </a>
-            <a href="#features" className="relative text-sm font-medium text-muted-foreground transition-colors hover:text-foreground after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-[#AC9776] after:transition-all hover:after:w-full">
+            <a href="/#features" className="relative text-sm font-medium text-muted-foreground transition-colors hover:text-foreground after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-[#AC9776] after:transition-all hover:after:w-full">
               Features
             </a>
-            <a href="#clients" className="relative text-sm font-medium text-muted-foreground transition-colors hover:text-foreground after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-[#AC9776] after:transition-all hover:after:w-full">
-              Clients
+            <a href="/#integrations" className="relative text-sm font-medium text-muted-foreground transition-colors hover:text-foreground after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-[#AC9776] after:transition-all hover:after:w-full">
+              Integrations
             </a>
             <div className="flex flex-col gap-2 pt-4">
               {me ? (

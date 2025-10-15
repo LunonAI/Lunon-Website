@@ -2,7 +2,9 @@ import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
 import { HowItWorks } from "@/components/how-it-works"
 import { Features } from "@/components/features"
-import { TrustedBy } from "@/components/trusted-by"
+import { BuiltBy } from "@/components/built-by"
+import { TestimonialsRotating } from "@/components/testimonials-rotating"
+import { Integrations } from "@/components/integrations"
 import { Footer } from "@/components/footer"
 
 export default function Home() {
@@ -13,7 +15,9 @@ export default function Home() {
         <Hero />
         <HowItWorks />
         <Features />
-        <TrustedBy />
+        <BuiltBy />
+        <TestimonialsRotating />
+        <Integrations />
       </main>
       <Footer />
     </div>

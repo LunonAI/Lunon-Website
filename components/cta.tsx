@@ -1,7 +1,12 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
+import { useRouter } from "next/navigation"
 
 export function CTA() {
+  const router = useRouter()
+
   return (
     <section className="border-b border-border py-24 md:py-32">
       <div className="container mx-auto px-4">
@@ -10,7 +15,7 @@ export function CTA() {
             Ready to transform your workflow?
           </h2>
           <p className="mb-10 text-pretty text-lg text-muted-foreground md:text-xl">
-            Join thousands of teams already building better products with StreamLine. Start your free trial today—no
+            Join thousands of teams already building better products with Stratos. Start your free trial today—no
             credit card required.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -18,7 +23,12 @@ export function CTA() {
               Start Free Trial
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
-            <Button size="lg" variant="outline" className="w-full sm:w-auto bg-transparent">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="w-full sm:w-auto bg-transparent"
+              onClick={() => router.push("/demo")}
+            >
               Schedule a Demo
             </Button>
           </div>

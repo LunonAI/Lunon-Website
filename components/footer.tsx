@@ -1,25 +1,8 @@
-import { Button } from "@/components/ui/button"
 import { Github, Twitter, Linkedin, Mail } from "lucide-react"
 
 export function Footer() {
   return (
     <footer className="bg-foreground text-white">
-      <div className="border-b border-white/10 py-16 md:py-20">
-        <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl lg:text-5xl">
-              Ready to Transform Your Consulting Practice?
-            </h2>
-            <p className="mb-8 text-lg text-white/70">
-              Join leading firms using AI to unlock insights and drive better outcomes for their clients.
-            </p>
-            <Button size="lg" className="bg-[#AC9776] text-white hover:bg-[#9A8565] px-8">
-              Request Demo
-            </Button>
-          </div>
-        </div>
-      </div>
-
       <div className="py-12 md:py-16">
         <div className="container mx-auto px-4">
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-5">

@@ -30,7 +30,7 @@ const features = [
 
 export function Features() {
   return (
-    <section id="features" className="bg-secondary/30 py-24 md:py-32">
+    <section id="features" className="bg-secondary/30 py-24 md:py-32 border-b border-border">
       <div className="container mx-auto px-4">
         <div className="mx-auto mb-16 max-w-3xl text-center">
           <h2 className="mb-4 text-balance text-3xl font-bold tracking-tight text-foreground md:text-4xl lg:text-5xl">

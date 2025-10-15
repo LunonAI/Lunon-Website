@@ -117,7 +117,7 @@ export function Hero() {
   // 2.  CENTRE BUTTONS  (order & copy now Fortune-500 aligned)
   // -------------------------------------------------------------------------
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-white to-neutral-50">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-white to-neutral-50 border-b border-border">
       <svg ref={svgRef} className="absolute inset-0 w-full h-full pointer-events-none" />
       <div className="absolute inset-0 bg-white/40" />
 
