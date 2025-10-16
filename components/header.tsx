@@ -26,9 +26,11 @@ export function Header() {
         <div className="relative flex h-full items-center">
           {/* LOGO */}
           <a href="/" className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-foreground">
-              <span className="font-mono text-lg font-bold text-white">S</span>
-            </div>
+            <img 
+              src="/Stratos-Labs-Logo.png" 
+              alt="Stratos" 
+              className="h-8 w-auto"
+            />
             <span className="text-xl font-bold tracking-tight">Stratos</span>
           </a>
 

@@ -8,9 +8,11 @@ export function Footer() {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-5">
             <div className="lg:col-span-2">
               <div className="mb-4 flex items-center gap-2">
-                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white">
-                  <span className="font-mono text-lg font-bold text-foreground">S</span>
-                </div>
+                <img 
+                  src="/Stratos-Labs-Logo.png" 
+                  alt="Stratos" 
+                  className="h-8 w-auto"
+                />
                 <span className="text-xl font-bold">Stratos</span>
               </div>
               <p className="mb-6 max-w-sm text-sm leading-relaxed text-white/70">

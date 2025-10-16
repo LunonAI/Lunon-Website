@@ -12,8 +12,8 @@ export const metadata: Metadata = {
     "Empower your consulting firm with AI-driven insights. Upload documents, analyze data, and unlock intelligence with secure, enterprise-grade AI technology.",
   generator: "v0.app",
   icons: {
-    icon: "/favicon.svg",
-    apple: "/favicon.svg",
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
 }
 
