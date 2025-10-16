@@ -106,9 +106,36 @@ export function Hero() {
       sim.force("y", d3.forceY(h / 2).strength(0.02))
       sim.alpha(0.4).restart()
     }
+
+    const onScroll = () => {
+      const scrollY = window.scrollY
+      const maxScroll = window.innerHeight * 0.5 // Reduce sensitivity
+      const scrollRatio = Math.min(scrollY / maxScroll, 1)
+      
+      // Smooth, gradual force adjustments
+      const baseStrength = 0.02
+      const baseCharge = -180
+      const baseAlpha = 0.7
+      
+      // Gentle force variations based on scroll
+      const newStrength = baseStrength + (scrollRatio * 0.03) // Subtle increase
+      const newCharge = baseCharge + (scrollRatio * -40) // Gentle repulsion increase
+      const newAlpha = baseAlpha + (scrollRatio * 0.2) // Smooth animation boost
+      
+      // Apply forces with smooth transitions
+      sim.force("y", d3.forceY(height / 2).strength(newStrength))
+      sim.force("charge", d3.forceManyBody().strength(newCharge))
+      sim.force("x", d3.forceX(width / 2).strength(0.002 + scrollRatio * 0.001)) // Subtle horizontal adjustment
+      
+      // Gentle restart with smooth alpha
+      sim.alpha(newAlpha * 0.6).restart()
+    }
+
     window.addEventListener("resize", onResize)
+    window.addEventListener("scroll", onScroll)
     return () => {
       window.removeEventListener("resize", onResize)
+      window.removeEventListener("scroll", onScroll)
       sim.stop()
     }
   }, [])
