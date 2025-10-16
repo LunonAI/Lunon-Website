@@ -28,7 +28,7 @@ export function Header() {
           <a href="/" className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity">
             <img 
               src="/Stratos-Labs-Logo.png" 
-              alt="Stratos" 
+              alt="Stratos Lab" 
               className="h-8 w-auto"
             />
             <span className="text-xl font-bold tracking-tight">Stratos</span>
