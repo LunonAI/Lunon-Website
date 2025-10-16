@@ -61,7 +61,7 @@ export function Header() {
                 className="bg-[#AC9776] text-white hover:bg-[#9A8565]"
                 onClick={() => router.push("/demo")}
               >
-                Request demo
+                Request Demo
               </Button>
             </>
           ) : (
@@ -70,7 +70,7 @@ export function Header() {
               className="bg-[#AC9776] text-white hover:bg-[#9A8565]"
               onClick={() => router.push("/demo")}
             >
-              Request demo
+              Request Demo
             </Button>
           )}
           </div>
@@ -106,12 +106,12 @@ export function Header() {
                     Switch project
                   </Button>
                   <Button size="sm" className="bg-[#AC9776] text-white hover:bg-[#9A8565]" onClick={() => router.push("/demo")}>
-                    Request demo
+                    Request Demo
                   </Button>
                 </>
               ) : (
                 <Button size="sm" className="bg-[#AC9776] text-white hover:bg-[#9A8565]" onClick={() => router.push("/demo")}>
-                  Request demo
+                  Request Demo
                 </Button>
               )}
             </div>

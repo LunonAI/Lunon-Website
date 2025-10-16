@@ -322,8 +322,8 @@ export default function DemoPage() {
             <p className="mt-1 text-sm text-muted-foreground">Demo duration</p>
           </div>
           <div className="rounded-lg border border-border bg-muted/30 p-6">
-            <p className="text-2xl font-bold text-[#AC9776]">No strings</p>
-            <p className="mt-1 text-sm text-muted-foreground">No commitment</p>
+            <p className="text-2xl font-bold text-[#AC9776]">No Obligation</p>
+            <p className="mt-1 text-sm text-muted-foreground">Zero commitment</p>
           </div>
         </div>
       </main>

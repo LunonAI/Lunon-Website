@@ -163,7 +163,8 @@ export function Hero() {
               className="w-full sm:w-auto bg-[#AC9776] text-white hover:bg-[#9A8565] px-8 shadow-lg hover:shadow-xl transition-shadow"
               onClick={() => window.location.href = "/demo"} // your demo/booking route
             >
-              Request demo
+              Request a Demo
+              <ArrowRight className="ml-1 h-5 w-6" />
             </Button>
           </div>
         )}

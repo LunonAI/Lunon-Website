@@ -68,10 +68,6 @@ export function Integrations() {
         <div className="mx-auto max-w-5xl">
           {/* Header */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#AC9776]/10 border border-[#AC9776]/20 mb-6">
-              <Plug className="h-4 w-4 text-[#AC9776]" />
-              <span className="text-sm font-medium text-[#AC9776]">Seamless Connections</span>
-            </div>
             <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground md:text-4xl lg:text-5xl">
               Integrations for Enhanced Functionality
             </h2>
