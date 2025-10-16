@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: '/Stratos-Website',
   eslint: {
     ignoreDuringBuilds: true,
   },
