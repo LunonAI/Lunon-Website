@@ -63,7 +63,7 @@ const integrations = [
 
 export function Integrations() {
   return (
-    <section id="integrations" className="bg-gradient-to-b from-neutral-50 to-white py-24 md:py-32 border-b border-border">
+    <section id="integrations" className="bg-gradient-to-b from-neutral-50 to-white pt-12 md:pt-16 pb-20 md:pb-24 border-b border-border">
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-5xl">
           {/* Header */}

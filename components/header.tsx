@@ -36,11 +36,11 @@ export function Header() {
 
           {/* DESKTOP NAV - Absolutely centered */}
           <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 md:flex">
-            <a href="/#how-it-works" className="relative text-sm font-medium text-muted-foreground transition-colors hover:text-foreground after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-[#AC9776] after:transition-all hover:after:w-full">
-              How It Works
+            <a href="/#product" className="relative text-sm font-medium text-muted-foreground transition-colors hover:text-foreground after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-[#AC9776] after:transition-all hover:after:w-full">
+              Product
             </a>
-            <a href="/#features" className="relative text-sm font-medium text-muted-foreground transition-colors hover:text-foreground after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-[#AC9776] after:transition-all hover:after:w-full">
-              Features
+            <a href="/about" className="relative text-sm font-medium text-muted-foreground transition-colors hover:text-foreground after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-[#AC9776] after:transition-all hover:after:w-full">
+              About
             </a>
             <a href="/#integrations" className="relative text-sm font-medium text-muted-foreground transition-colors hover:text-foreground after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-[#AC9776] after:transition-all hover:after:w-full">
               Integrations
@@ -92,11 +92,11 @@ export function Header() {
       {mobileMenuOpen && (
         <div className="border-t border-border bg-white md:hidden">
           <nav className="container mx-auto flex flex-col gap-4 px-4 py-6">
-            <a href="/#how-it-works" className="relative text-sm font-medium text-muted-foreground transition-colors hover:text-foreground after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-[#AC9776] after:transition-all hover:after:w-full">
-              How It Works
+            <a href="/#product" className="relative text-sm font-medium text-muted-foreground transition-colors hover:text-foreground after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-[#AC9776] after:transition-all hover:after:w-full">
+              Product
             </a>
-            <a href="/#features" className="relative text-sm font-medium text-muted-foreground transition-colors hover:text-foreground after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-[#AC9776] after:transition-all hover:after:w-full">
-              Features
+            <a href="/about" className="relative text-sm font-medium text-muted-foreground transition-colors hover:text-foreground after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-[#AC9776] after:transition-all hover:after:w-full">
+              About
             </a>
             <a href="/#integrations" className="relative text-sm font-medium text-muted-foreground transition-colors hover:text-foreground after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-[#AC9776] after:transition-all hover:after:w-full">
               Integrations
