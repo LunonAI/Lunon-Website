@@ -79,7 +79,7 @@ export function Header() {
 
           {/* MOBILE HAMBURGER */}
           <button
-            className="md:hidden"
+            className="ml-auto md:hidden"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >

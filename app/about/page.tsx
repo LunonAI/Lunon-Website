@@ -42,7 +42,7 @@ export default function AboutPage() {
     {
       name: "Harrison Zoccoli",
       role: "AI Engineer",
-      image: "/Harrison.JPG",
+      image: "/Harrison.jpg",
       bio: "Finance student.",
       linkedin: "https://www.linkedin.com/in/harrison-zoccoli/",
     },
