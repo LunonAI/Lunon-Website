@@ -198,10 +198,10 @@ export default function AboutPage() {
                   </svg>
                 </Button>
                 <a
-                  href="mailto:careers@stratoslab.ai"
+                  href="mailto:careers@lunon.ai"
                   className="text-[#AC9776] hover:text-[#9A8565] font-medium transition-colors"
                 >
-                  Or reach out directly at careers@stratoslab.ai
+                  Or reach out directly at careers@lunon.ai
                 </a>
               </div>
             </div>

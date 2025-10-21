@@ -72,7 +72,7 @@ export function Integrations() {
               Integrations for Enhanced Functionality
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Connect Stratos with the tools you already use. Our platform seamlessly integrates with leading enterprise software to streamline your workflow.
+              Connect Lunon with the tools you already use. Our platform seamlessly integrates with leading enterprise software to streamline your workflow.
             </p>
           </div>
 

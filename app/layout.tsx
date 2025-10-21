@@ -7,7 +7,7 @@ import { Suspense } from "react"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Stratos - AI-Powered Consulting Intelligence",
+  title: "Lunon - AI-Powered Consulting Intelligence",
   description:
     "Empower your consulting firm with AI-driven insights. Upload documents, analyze data, and unlock intelligence with secure, enterprise-grade AI technology.",
   generator: "v0.app",

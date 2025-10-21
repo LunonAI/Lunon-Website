@@ -14,7 +14,7 @@ export function Product() {
                 SharePoint, email threads. Finding that one analysis from six months ago? Good luck.
               </p>
               <p>
-                Stratos turns your document chaos into a searchable, conversational knowledge base. Upload 
+                Lunon turns your document chaos into a searchable, conversational knowledge base. Upload 
                 files and our AI makes them instantly queryable. Need to find every mention of "operational 
                 efficiency" across 200 client reports? Done. Want to know what your team recommended about 
                 supply chain optimization last year? Just ask.

@@ -8,14 +8,14 @@ import { Button } from "@/components/ui/button"
 
 const testimonials = [
   {
-    quote: "Stratos has completely transformed how we handle client data. The semantic search is incredibly accurate, and the AI chat feature saves us hours every day.",
+    quote: "Lunon has completely transformed how we handle client data. The semantic search is incredibly accurate, and the AI chat feature saves us hours every day.",
     author: "Jennifer Martinez",
     role: "Partner, Strategic Consulting Group",
     avatar: "/professional-woman-diverse.png",
     initials: "JM",
   },
   {
-    quote: "As a boutique consulting firm, we needed enterprise-grade tools without the enterprise price tag. Stratos delivered exactly that. The ROI was immediate.",
+    quote: "As a boutique consulting firm, we needed enterprise-grade tools without the enterprise price tag. Lunon delivered exactly that. The ROI was immediate.",
     author: "David Chen",
     role: "Managing Director, Chen Advisory",
     avatar: "/professional-man.jpg",
@@ -66,7 +66,7 @@ export function TestimonialsRotating() {
               Transforming Businesses, One Customer at a Time
             </h2>
             <p className="text-lg text-muted-foreground">
-              See what our early adopters have to say about their experience with Stratos
+              See what our early adopters have to say about their experience with Lunon
             </p>
           </div>
 

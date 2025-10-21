@@ -17,7 +17,7 @@ export function TrustedBy() {
             Trusted by Leading Firms
           </h2>
           <p className="text-lg text-muted-foreground">
-            Join the consulting firms transforming their intelligence operations with Stratos
+            Join the consulting firms transforming their intelligence operations with Lunon
           </p>
         </div>
 

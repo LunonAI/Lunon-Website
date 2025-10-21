@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Updated color scheme for Stratos - white background, black text, gold accent */
+  /* Updated color scheme for Lunon - white background, black text, gold accent */
   --background: oklch(1 0 0); /* Pure white */
   --foreground: oklch(0.15 0 0); /* Black text */
   --card: oklch(0.99 0 0); /* Off-white for cards */

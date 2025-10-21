@@ -153,7 +153,7 @@ export function Hero() {
           Empower Your Consulting Firm with&nbsp;AI Intelligence
         </h1>
         <p className="mt-6 text-pretty text-lg md:text-xl text-muted-foreground lg:max-w-3xl mx-auto">
-          Transform documents into actionable insights. Stratos combines semantic search,
+          Transform documents into actionable insights. Lunon combines semantic search,
           RAG-powered chat, and enterprise-grade security to unlock the full potential of your data.
         </p>
 

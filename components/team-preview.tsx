@@ -14,7 +14,7 @@ export function TeamPreview() {
           {/* Headline */}
           <div className="text-center mb-12">
             <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground md:text-4xl lg:text-5xl">
-              Meet Team Stratos
+              Meet Team Lunon
             </h2>
             
             {/* Sub-headline */}
@@ -28,8 +28,8 @@ export function TeamPreview() {
             <div className="relative rounded-2xl overflow-hidden shadow-xl border-2 border-[#AC9776]/20">
               <div className="aspect-[21/9] relative bg-gradient-to-br from-[#AC9776]/10 to-[#AC9776]/5">
                 <Image
-                  src="/TeamStratos.JPG"
-                  alt="Team Stratos"
+                  src="/TeamLunon.JPG"
+                  alt="Team Lunon"
                   fill
                   className="object-cover"
                   placeholder="blur"

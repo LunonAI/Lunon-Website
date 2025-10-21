@@ -156,7 +156,7 @@ export default function DemoPage() {
             Request a Demo
           </h1>
           <p className="text-lg text-muted-foreground">
-            See how Stratos can transform your consulting firm. Fill out the form below and we'll
+            See how Lunon can transform your consulting firm. Fill out the form below and we'll
             schedule a personalized demonstration.
           </p>
         </div>
@@ -275,7 +275,7 @@ export default function DemoPage() {
               </Label>
               <Textarea
                 id="message"
-                placeholder="What challenges are you looking to solve? How many team members would use Stratos?"
+                placeholder="What challenges are you looking to solve? How many team members would use Lunon?"
                 rows={5}
                 value={formData.message}
                 onChange={(e) => handleInputChange("message", e.target.value)}

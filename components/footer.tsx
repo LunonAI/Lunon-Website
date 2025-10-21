@@ -9,11 +9,11 @@ export function Footer() {
             <div className="lg:col-span-2">
               <div className="mb-4 flex items-center gap-2">
                 <img 
-                  src="/Stratos-Labs-Logo.png" 
-                  alt="Stratos" 
+                  src="/Lunon-Logo.png" 
+                  alt="Lunon" 
                   className="h-8 w-auto"
                 />
-                <span className="text-xl font-bold">Stratos</span>
+                <span className="text-xl font-bold">Lunon</span>
               </div>
               <p className="mb-6 max-w-sm text-sm leading-relaxed text-white/70">
                 AI-powered intelligence platform for modern consulting firms. Secure, scalable, and built for
@@ -131,7 +131,7 @@ export function Footer() {
           </div>
 
           <div className="mt-12 border-t border-white/10 pt-8 text-center text-sm text-white/60">
-            <p>&copy; {new Date().getFullYear()} Stratos. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Lunon. All rights reserved.</p>
           </div>
         </div>
       </div>

@@ -15,7 +15,7 @@ export function CTA() {
             Ready to transform your workflow?
           </h2>
           <p className="mb-10 text-pretty text-lg text-muted-foreground md:text-xl">
-            Join thousands of teams already building better products with Stratos. Start your free trial today—no
+            Join thousands of teams already building better products with Lunon. Start your free trial today—no
             credit card required.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">

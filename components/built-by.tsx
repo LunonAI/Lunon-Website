@@ -17,7 +17,7 @@ export function BuiltBy() {
               Engineered at Carnegie Mellon
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Stratos was founded by students from Carnegie Mellon with a clear goal: to help 
+              Lunon was founded by students from Carnegie Mellon with a clear goal: to help 
               consulting firms unlock the full value of their internal knowledge. Our AI infrastructure transforms 
               complex data and documents into insights that drive better decisions.
             </p>
@@ -27,8 +27,8 @@ export function BuiltBy() {
           <div className="mb-8 max-w-2xl mx-auto">
             <div className="relative rounded-2xl overflow-hidden shadow-xl border-2 border-[#AC9776]/20">
               <img
-                src="/TeamStratos.JPG"
-                alt="Team Stratos"
+                src="/TeamLunon.JPG"
+                alt="Team Lunon"
                 className="w-full h-auto"
               />
             </div>

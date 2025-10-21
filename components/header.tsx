@@ -27,11 +27,11 @@ export function Header() {
           {/* LOGO */}
           <a href="/" className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity">
             <img 
-              src="/Stratos-Labs-Logo.png" 
-              alt="Stratos Lab" 
+              src="/Lunon-Logo.png" 
+              alt="Lunon" 
               className="h-8 w-auto"
             />
-            <span className="text-xl font-bold tracking-tight">Stratos</span>
+            <span className="text-xl font-bold tracking-tight">Lunon</span>
           </a>
 
           {/* DESKTOP NAV - Absolutely centered */}
