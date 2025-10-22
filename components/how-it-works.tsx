@@ -36,8 +36,8 @@ export function HowItWorks() {
           {steps.map((step, index) => (
             <div key={index} className="relative flex flex-col items-center text-center">
               {/* Gold accent icon */}
-              <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl border-2 border-[#AC9776] bg-white">
-                <step.icon className="h-8 w-8 text-[#AC9776]" />
+              <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl border-2 border-[#522396] bg-white">
+                <step.icon className="h-8 w-8 text-[#522396]" />
               </div>
 
               <h3 className="mb-3 text-xl font-semibold text-foreground">{step.title}</h3>

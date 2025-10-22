@@ -103,7 +103,7 @@ export function Integrations() {
                 </div>
 
                 {/* Hover Effect */}
-                <div className="absolute inset-0 rounded-xl bg-[#AC9776]/0 group-hover:bg-[#AC9776]/5 transition-colors duration-300" />
+                <div className="absolute inset-0 rounded-xl bg-[#522396]/0 group-hover:bg-[#522396]/5 transition-colors duration-300" />
               </div>
             ))}
           </div>
@@ -112,7 +112,7 @@ export function Integrations() {
           <div className="mt-12 text-center">
             <p className="text-sm text-muted-foreground">
               Can't find what you're looking for?{" "}
-              <a href="/demo" className="text-[#AC9776] hover:underline font-medium">
+              <a href="/demo" className="text-[#522396] hover:underline font-medium">
                 Contact us
               </a>{" "}
               to discuss custom integrations.

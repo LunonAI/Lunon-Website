@@ -25,7 +25,7 @@ export function BuiltBy() {
 
           {/* Team Photo */}
           <div className="mb-8 max-w-2xl mx-auto">
-            <div className="relative rounded-2xl overflow-hidden shadow-xl border-2 border-[#AC9776]/20">
+            <div className="relative rounded-2xl overflow-hidden shadow-xl border-2 border-[#522396]/20">
               <img
                 src="/TeamLunon.JPG"
                 alt="Team Lunon"
@@ -38,7 +38,7 @@ export function BuiltBy() {
           <div className="text-center">
             <Button
               onClick={() => router.push("/about")}
-              className="bg-[#AC9776] text-white hover:bg-[#9A8565] shadow-lg hover:shadow-xl transition-all"
+              className="bg-[#522396] text-white hover:bg-[#9A8565] shadow-lg hover:shadow-xl transition-all"
             >
               Meet the Team
             </Button>

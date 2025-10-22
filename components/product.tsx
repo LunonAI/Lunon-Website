@@ -27,7 +27,7 @@ export function Product() {
             <div className="relative">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 rounded-lg bg-[#AC9776] flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-lg bg-[#522396] flex items-center justify-center">
                     <span className="text-2xl font-bold text-white">1</span>
                   </div>
                 </div>
@@ -42,13 +42,13 @@ export function Product() {
                 </div>
               </div>
               {/* Connecting arrow */}
-              <div className="hidden md:block absolute top-6 -right-5 w-10 h-0.5 bg-[#AC9776]/30"></div>
+              <div className="hidden md:block absolute top-6 -right-5 w-10 h-0.5 bg-[#522396]/30"></div>
             </div>
 
             <div className="relative">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 rounded-lg bg-[#AC9776] flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-lg bg-[#522396] flex items-center justify-center">
                     <span className="text-2xl font-bold text-white">2</span>
                   </div>
                 </div>
@@ -63,13 +63,13 @@ export function Product() {
                 </div>
               </div>
               {/* Connecting arrow */}
-              <div className="hidden md:block absolute top-6 -right-5 w-10 h-0.5 bg-[#AC9776]/30"></div>
+              <div className="hidden md:block absolute top-6 -right-5 w-10 h-0.5 bg-[#522396]/30"></div>
             </div>
 
             <div>
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 rounded-lg bg-[#AC9776] flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-lg bg-[#522396] flex items-center justify-center">
                     <span className="text-2xl font-bold text-white">3</span>
                   </div>
                 </div>

@@ -22,28 +22,28 @@ export function Footer() {
               <div className="flex gap-4">
                 <a
                   href="#"
-                  className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/20 bg-white/5 transition-colors hover:bg-[#AC9776] hover:border-[#AC9776]"
+                  className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/20 bg-white/5 transition-colors hover:bg-[#522396] hover:border-[#522396]"
                   aria-label="Twitter"
                 >
                   <Twitter className="h-4 w-4" />
                 </a>
                 <a
                   href="#"
-                  className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/20 bg-white/5 transition-colors hover:bg-[#AC9776] hover:border-[#AC9776]"
+                  className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/20 bg-white/5 transition-colors hover:bg-[#522396] hover:border-[#522396]"
                   aria-label="GitHub"
                 >
                   <Github className="h-4 w-4" />
                 </a>
                 <a
                   href="#"
-                  className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/20 bg-white/5 transition-colors hover:bg-[#AC9776] hover:border-[#AC9776]"
+                  className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/20 bg-white/5 transition-colors hover:bg-[#522396] hover:border-[#522396]"
                   aria-label="LinkedIn"
                 >
                   <Linkedin className="h-4 w-4" />
                 </a>
                 <a
                   href="#"
-                  className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/20 bg-white/5 transition-colors hover:bg-[#AC9776] hover:border-[#AC9776]"
+                  className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/20 bg-white/5 transition-colors hover:bg-[#522396] hover:border-[#522396]"
                   aria-label="Email"
                 >
                   <Mail className="h-4 w-4" />

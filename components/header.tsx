@@ -1,8 +1,8 @@
 // components/header.tsx
 "use client"
 
-import { Button } from "@/components/ui/button"
-import { Menu, X, ArrowRight } from "lucide-react"
+import { LunarButton } from "@/components/ui/LunarButton"
+import { Menu, X } from "lucide-react"
 import { useState } from "react"
 import { useRouter } from "next/navigation"
 
@@ -21,59 +21,76 @@ export function Header() {
   const me = useMe()
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b-2 border-[#AC9776] bg-white shadow-sm">
+    <header 
+      className="sticky top-0 z-50 w-full border-b backdrop-blur-sm" 
+      style={{ 
+        backgroundColor: 'rgba(255, 255, 255, 0.9)',
+        borderColor: 'var(--lunar-border)'
+      }}
+    >
       <div className="container mx-auto h-16 px-4">
         <div className="relative flex h-full items-center">
           {/* LOGO */}
-          <a href="/" className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity">
+          <a href="/" className="flex items-center cursor-pointer hover:opacity-80 transition-opacity">
             <img 
               src="/Lunon-Logo.png" 
               alt="Lunon" 
               className="h-8 w-auto"
             />
-            <span className="text-xl font-bold tracking-tight">Lunon</span>
           </a>
 
           {/* DESKTOP NAV - Absolutely centered */}
           <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 md:flex">
-            <a href="/#product" className="relative text-sm font-medium text-muted-foreground transition-colors hover:text-foreground after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-[#AC9776] after:transition-all hover:after:w-full">
+            <a 
+              href="/#product" 
+              className="relative text-sm font-medium lunar-transition hover:opacity-70"
+              style={{ color: 'var(--lunar-text)' }}
+            >
               Product
             </a>
-            <a href="/about" className="relative text-sm font-medium text-muted-foreground transition-colors hover:text-foreground after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-[#AC9776] after:transition-all hover:after:w-full">
+            <a 
+              href="/about" 
+              className="relative text-sm font-medium lunar-transition hover:opacity-70"
+              style={{ color: 'var(--lunar-text)' }}
+            >
               About
             </a>
-            <a href="/#integrations" className="relative text-sm font-medium text-muted-foreground transition-colors hover:text-foreground after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-[#AC9776] after:transition-all hover:after:w-full">
+            <a 
+              href="/#integrations" 
+              className="relative text-sm font-medium lunar-transition hover:opacity-70"
+              style={{ color: 'var(--lunar-text)' }}
+            >
               Integrations
             </a>
           </nav>
 
           {/* DESKTOP BUTTONS */}
-          <div className="ml-auto hidden items-center gap-4 md:flex">
+          <div className="ml-auto hidden items-center gap-3 md:flex">
           {me ? (
             <>
-              <Button
-                size="sm"
-                variant="outline"
+              <LunarButton
+                size="md"
+                variant="secondary"
                 onClick={() => router.push("/workspace")}
               >
                 Switch project
-              </Button>
-              <Button
-                size="sm"
-                className="bg-[#AC9776] text-white hover:bg-[#9A8565]"
+              </LunarButton>
+              <LunarButton
+                size="md"
+                variant="primary"
                 onClick={() => router.push("/demo")}
               >
                 Request Demo
-              </Button>
+              </LunarButton>
             </>
           ) : (
-            <Button
-              size="sm"
-              className="bg-[#AC9776] text-white hover:bg-[#9A8565]"
+            <LunarButton
+              size="md"
+              variant="primary"
               onClick={() => router.push("/demo")}
             >
               Request Demo
-            </Button>
+            </LunarButton>
           )}
           </div>
 
@@ -90,31 +107,49 @@ export function Header() {
 
       {/* MOBILE MENU – buttons mirror desktop order */}
       {mobileMenuOpen && (
-        <div className="border-t border-border bg-white md:hidden">
+        <div 
+          className="border-t md:hidden"
+          style={{ 
+            borderColor: 'var(--lunar-border)', 
+            backgroundColor: 'var(--lunar-surface)' 
+          }}
+        >
           <nav className="container mx-auto flex flex-col gap-4 px-4 py-6">
-            <a href="/#product" className="relative text-sm font-medium text-muted-foreground transition-colors hover:text-foreground after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-[#AC9776] after:transition-all hover:after:w-full">
+            <a 
+              href="/#product" 
+              className="text-sm font-medium lunar-transition hover:opacity-70"
+              style={{ color: 'var(--lunar-text)' }}
+            >
               Product
             </a>
-            <a href="/about" className="relative text-sm font-medium text-muted-foreground transition-colors hover:text-foreground after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-[#AC9776] after:transition-all hover:after:w-full">
+            <a 
+              href="/about" 
+              className="text-sm font-medium lunar-transition hover:opacity-70"
+              style={{ color: 'var(--lunar-text)' }}
+            >
               About
             </a>
-            <a href="/#integrations" className="relative text-sm font-medium text-muted-foreground transition-colors hover:text-foreground after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-[#AC9776] after:transition-all hover:after:w-full">
+            <a 
+              href="/#integrations" 
+              className="text-sm font-medium lunar-transition hover:opacity-70"
+              style={{ color: 'var(--lunar-text)' }}
+            >
               Integrations
             </a>
             <div className="flex flex-col gap-2 pt-4">
               {me ? (
                 <>
-                  <Button size="sm" variant="outline" onClick={() => router.push("/workspace")}>
+                  <LunarButton size="md" variant="secondary" onClick={() => router.push("/workspace")}>
                     Switch project
-                  </Button>
-                  <Button size="sm" className="bg-[#AC9776] text-white hover:bg-[#9A8565]" onClick={() => router.push("/demo")}>
+                  </LunarButton>
+                  <LunarButton size="md" variant="primary" onClick={() => router.push("/demo")}>
                     Request Demo
-                  </Button>
+                  </LunarButton>
                 </>
               ) : (
-                <Button size="sm" className="bg-[#AC9776] text-white hover:bg-[#9A8565]" onClick={() => router.push("/demo")}>
+                <LunarButton size="md" variant="primary" onClick={() => router.push("/demo")}>
                   Request Demo
-                </Button>
+                </LunarButton>
               )}
             </div>
           </nav>

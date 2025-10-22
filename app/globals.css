@@ -4,27 +4,37 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Updated color scheme for Lunon - white background, black text, gold accent */
-  --background: oklch(1 0 0); /* Pure white */
-  --foreground: oklch(0.15 0 0); /* Black text */
-  --card: oklch(0.99 0 0); /* Off-white for cards */
-  --card-foreground: oklch(0.15 0 0);
+  /* Lunar Light Design System */
+  --lunar-base: #F8F9FB;
+  --lunar-surface: #FFFFFF;
+  --lunar-text: #202227;
+  --lunar-accent: #CACED8;
+  --lunar-navy: #0F1A2B;
+  --lunar-border: #E5E7EB;
+  --lunar-muted: #F3F4F6;
+  --lunar-highlight: #E6ECF7;
+  
+  /* Legacy mappings for compatibility */
+  --background: oklch(0.98 0.003 240); /* Lunar base */
+  --foreground: oklch(0.14 0.01 240); /* Lunar text */
+  --card: oklch(1 0 0); /* Lunar surface */
+  --card-foreground: oklch(0.14 0.01 240);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.15 0 0);
-  --primary: oklch(0.15 0 0); /* Black for primary */
+  --popover-foreground: oklch(0.14 0.01 240);
+  --primary: oklch(0.14 0.01 240); /* Lunar text */
   --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.96 0 0); /* Light gray */
-  --secondary-foreground: oklch(0.15 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.45 0 0);
-  --accent: oklch(0.65 0.08 65); /* Gold #AC9776 */
-  --accent-foreground: oklch(1 0 0);
+  --secondary: oklch(0.96 0.002 240); /* Lunar muted */
+  --secondary-foreground: oklch(0.14 0.01 240);
+  --muted: oklch(0.96 0.002 240);
+  --muted-foreground: oklch(0.45 0.01 240);
+  --accent: oklch(0.83 0.01 240); /* Lunar accent */
+  --accent-foreground: oklch(0.14 0.01 240);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(1 0 0);
-  --border: oklch(0.92 0 0); /* Subtle border */
-  --input: oklch(0.92 0 0);
-  --ring: oklch(0.65 0.08 65); /* Gold ring */
-  --radius: 0.5rem;
+  --border: oklch(0.91 0.002 240); /* Lunar border */
+  --input: oklch(0.91 0.002 240);
+  --ring: oklch(0.83 0.01 240); /* Lunar accent */
+  --radius: 0.75rem;
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -120,7 +130,28 @@
   * {
     @apply border-border outline-ring/50;
   }
-  body {
-    @apply bg-background text-foreground;
+  
+  html, body {
+    background: var(--lunar-base);
+    color: var(--lunar-text);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .lunar-transition {
+    transition: all 200ms ease;
+  }
+}
+
+/* Lunar shadow utilities */
+@layer utilities {
+  .shadow-lunar-sm {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+  .shadow-lunar-md {
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+  }
+  .shadow-lunar-glow {
+    box-shadow: 0 0 40px rgba(230, 236, 247, 0.6);
   }
 }

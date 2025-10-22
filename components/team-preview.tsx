@@ -25,8 +25,8 @@ export function TeamPreview() {
 
           {/* Team Photo */}
           <div className="mb-8">
-            <div className="relative rounded-2xl overflow-hidden shadow-xl border-2 border-[#AC9776]/20">
-              <div className="aspect-[21/9] relative bg-gradient-to-br from-[#AC9776]/10 to-[#AC9776]/5">
+            <div className="relative rounded-2xl overflow-hidden shadow-xl border-2 border-[#522396]/20">
+              <div className="aspect-[21/9] relative bg-gradient-to-br from-[#522396]/10 to-[#522396]/5">
                 <Image
                   src="/TeamLunon.JPG"
                   alt="Team Lunon"
@@ -44,7 +44,7 @@ export function TeamPreview() {
             <Button
               size="lg"
               onClick={() => router.push("/about")}
-              className="bg-[#AC9776] text-white hover:bg-[#9A8565] shadow-lg hover:shadow-xl transition-all"
+              className="bg-[#522396] text-white hover:bg-[#45158C] shadow-lg hover:shadow-xl transition-all"
             >
               Learn More About Our Team
               <svg

@@ -26,7 +26,7 @@ export function TrustedBy() {
           {companies.map((company, index) => (
             <div
               key={index}
-              className="flex h-20 w-full items-center justify-center rounded-lg border border-border bg-secondary/20 px-4 transition-all hover:border-[#AC9776]/30"
+              className="flex h-20 w-full items-center justify-center rounded-lg border border-border bg-secondary/20 px-4 transition-all hover:border-[#522396]/30"
             >
               <span className="text-sm font-semibold text-muted-foreground grayscale">{company}</span>
             </div>

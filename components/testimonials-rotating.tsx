@@ -72,12 +72,12 @@ export function TestimonialsRotating() {
 
           {/* Testimonial Card */}
           <div className="relative">
-            <Card className="border-2 border-[#AC9776]/20 bg-white shadow-lg">
+            <Card className="border-2 border-[#522396]/20 bg-white shadow-lg">
               <CardContent className="p-8 md:p-12">
                 {/* Quote */}
                 <div className="mb-8">
                   <svg
-                    className="h-10 w-10 text-[#AC9776]/30 mb-4"
+                    className="h-10 w-10 text-[#522396]/30 mb-4"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -90,13 +90,13 @@ export function TestimonialsRotating() {
 
                 {/* Author */}
                 <div className="flex items-center gap-4">
-                  <Avatar className="h-14 w-14 border-2 border-[#AC9776]/20">
+                  <Avatar className="h-14 w-14 border-2 border-[#522396]/20">
                     <AvatarImage
                       src={currentTestimonial.avatar || "/placeholder.svg"}
                       alt={currentTestimonial.author}
                       className="object-cover"
                     />
-                    <AvatarFallback className="bg-[#AC9776]/10 text-[#AC9776] font-semibold">
+                    <AvatarFallback className="bg-[#522396]/10 text-[#522396] font-semibold">
                       {currentTestimonial.initials}
                     </AvatarFallback>
                   </Avatar>
@@ -118,7 +118,7 @@ export function TestimonialsRotating() {
                 variant="outline"
                 size="icon"
                 onClick={goToPrevious}
-                className="h-10 w-10 rounded-full hover:bg-[#AC9776]/10 hover:border-[#AC9776]/30"
+                className="h-10 w-10 rounded-full hover:bg-[#522396]/10 hover:border-[#522396]/30"
               >
                 <ChevronLeft className="h-5 w-5" />
               </Button>
@@ -134,8 +134,8 @@ export function TestimonialsRotating() {
                     }}
                     className={`h-2 rounded-full transition-all ${
                       index === currentIndex
-                        ? "w-8 bg-[#AC9776]"
-                        : "w-2 bg-[#AC9776]/30 hover:bg-[#AC9776]/50"
+                        ? "w-8 bg-[#522396]"
+                        : "w-2 bg-[#522396]/30 hover:bg-[#522396]/50"
                     }`}
                     aria-label={`Go to testimonial ${index + 1}`}
                   />
@@ -146,7 +146,7 @@ export function TestimonialsRotating() {
                 variant="outline"
                 size="icon"
                 onClick={goToNext}
-                className="h-10 w-10 rounded-full hover:bg-[#AC9776]/10 hover:border-[#AC9776]/30"
+                className="h-10 w-10 rounded-full hover:bg-[#522396]/10 hover:border-[#522396]/30"
               >
                 <ChevronRight className="h-5 w-5" />
               </Button>
