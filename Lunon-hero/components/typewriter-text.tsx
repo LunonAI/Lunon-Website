@@ -115,10 +115,10 @@ export function TypewriterText() {
           
           {/* Smooth fading cursor */}
           <span
-            className="inline-block w-0.5 h-7 md:h-8 lg:h-9 bg-slate-300 ml-1 transition-opacity duration-300 align-middle"
+            className="inline-block w-0.5 h-6 md:h-7 lg:h-8 bg-slate-300 ml-1 transition-opacity duration-300"
             style={{
               opacity: cursorVisible ? 1 : 0.2,
-              verticalAlign: "baseline",
+              verticalAlign: "-0.1em",
             }}
           />
         </span>
