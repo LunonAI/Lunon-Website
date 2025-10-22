@@ -148,3 +148,265 @@
     animation-delay: 1000ms;
   }
 }
+
+/* Outer Space Theme Animations */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes starScatter1 {
+  0% {
+    opacity: 0.5;
+    filter: blur(2px);
+  }
+  50% {
+    opacity: 0.2;
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 0.5;
+    filter: blur(0px);
+  }
+}
+
+@keyframes starScatter2 {
+  0% {
+    opacity: 0.4;
+    filter: blur(2px);
+  }
+  50% {
+    opacity: 0.15;
+    filter: blur(5px);
+  }
+  100% {
+    opacity: 0.4;
+    filter: blur(0px);
+  }
+}
+
+@keyframes starScatter3 {
+  0% {
+    opacity: 0.6;
+    filter: blur(1px);
+  }
+  50% {
+    opacity: 0.25;
+    filter: blur(3px);
+  }
+  100% {
+    opacity: 0.6;
+    filter: blur(0.5px);
+  }
+}
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer utilities {
+  .animate-shimmer {
+    animation: shimmer 3s ease-in-out infinite;
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-twinkle {
+    animation: twinkle 3s ease-in-out infinite;
+  }
+  
+  .animate-orbit {
+    animation: orbit 60s linear infinite;
+  }
+}
+
+/* Glare Hover Effect for Button */
+.glare-button {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.glare-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: var(--gh-size, 150%);
+  height: var(--gh-size, 150%);
+  background: linear-gradient(
+    var(--gh-angle, -45deg),
+    transparent 0%,
+    transparent 40%,
+    var(--gh-rgba, rgba(71, 85, 105, 0.5)) 50%,
+    transparent 60%,
+    transparent 100%
+  );
+  transform: translate(-50%, -50%) translateX(-100%);
+  transition: transform var(--gh-duration, 650ms) cubic-bezier(0.23, 1, 0.32, 1);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.glare-button:hover::before {
+  transform: translate(-50%, -50%) translateX(100%);
+}
+
+.glare-button > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Starfield layers using CSS box-shadow for performance */
+.stars-layer-1 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: 
+    5vw 12vh 1px 0px white,
+    15vw 25vh 1px 0px white,
+    25vw 8vh 1px 0px white,
+    35vw 45vh 1px 0px white,
+    45vw 18vh 1px 0px white,
+    55vw 65vh 1px 0px white,
+    65vw 32vh 1px 0px white,
+    75vw 78vh 1px 0px white,
+    85vw 42vh 1px 0px white,
+    95vw 58vh 1px 0px white,
+    10vw 88vh 1px 0px white,
+    20vw 52vh 1px 0px white,
+    30vw 95vh 1px 0px white,
+    40vw 35vh 1px 0px white,
+    50vw 72vh 1px 0px white,
+    60vw 15vh 1px 0px white,
+    70vw 48vh 1px 0px white,
+    80vw 85vh 1px 0px white,
+    90vw 28vh 1px 0px white,
+    12vw 62vh 1px 0px white,
+    22vw 38vh 1px 0px white,
+    32vw 82vh 1px 0px white,
+    42vw 55vh 1px 0px white,
+    52vw 22vh 1px 0px white,
+    62vw 75vh 1px 0px white,
+    72vw 42vh 1px 0px white,
+    82vw 68vh 1px 0px white,
+    92vw 18vh 1px 0px white,
+    8vw 48vh 1px 0px white,
+    18vw 92vh 1px 0px white;
+  opacity: 0.5;
+  animation: starScatter1 0.5s ease-out forwards;
+}
+
+.stars-layer-2 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: 
+    7vw 22vh 1px 0px white,
+    17vw 58vh 1px 0px white,
+    27vw 15vh 1px 0px white,
+    37vw 68vh 1px 0px white,
+    47vw 35vh 1px 0px white,
+    57vw 82vh 1px 0px white,
+    67vw 48vh 1px 0px white,
+    77vw 12vh 1px 0px white,
+    87vw 75vh 1px 0px white,
+    13vw 42vh 1px 0px white,
+    23vw 88vh 1px 0px white,
+    33vw 28vh 1px 0px white,
+    43vw 65vh 1px 0px white,
+    53vw 52vh 1px 0px white,
+    63vw 8vh 1px 0px white,
+    73vw 95vh 1px 0px white,
+    83vw 38vh 1px 0px white,
+    93vw 72vh 1px 0px white,
+    9vw 55vh 1px 0px white,
+    19vw 18vh 1px 0px white,
+    29vw 78vh 1px 0px white,
+    39vw 45vh 1px 0px white,
+    49vw 25vh 1px 0px white,
+    59vw 62vh 1px 0px white,
+    69vw 85vh 1px 0px white,
+    79vw 32vh 1px 0px white,
+    89vw 92vh 1px 0px white,
+    14vw 48vh 1px 0px white,
+    24vw 15vh 1px 0px white,
+    34vw 75vh 1px 0px white;
+  opacity: 0.4;
+  animation: starScatter2 0.5s ease-out 0.05s forwards;
+}
+
+.stars-layer-3 {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: 
+    11vw 32vh 1px 0px white,
+    21vw 68vh 1px 0px white,
+    31vw 18vh 1px 0px white,
+    41vw 85vh 1px 0px white,
+    51vw 45vh 1px 0px white,
+    61vw 12vh 1px 0px white,
+    71vw 78vh 1px 0px white,
+    81vw 52vh 1px 0px white,
+    91vw 25vh 1px 0px white,
+    16vw 95vh 1px 0px white,
+    26vw 38vh 1px 0px white,
+    36vw 72vh 1px 0px white,
+    46vw 55vh 1px 0px white,
+    56vw 8vh 1px 0px white,
+    66vw 88vh 1px 0px white,
+    76vw 42vh 1px 0px white,
+    86vw 62vh 1px 0px white,
+    6vw 75vh 1px 0px white,
+    28vw 22vh 1px 0px white,
+    48vw 92vh 1px 0px white;
+  opacity: 0.6;
+  filter: blur(0.5px);
+  animation: starScatter3 0.5s ease-out 0.1s forwards;
+}

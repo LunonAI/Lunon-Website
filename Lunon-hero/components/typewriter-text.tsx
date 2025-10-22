@@ -34,12 +34,12 @@ export function TypewriterText() {
       if (displayText.length < currentPhrase.length) {
         const timeout = setTimeout(() => {
           setDisplayText(currentPhrase.slice(0, displayText.length + 1))
-        }, 80)
+        }, 50)
         return () => clearTimeout(timeout)
       } else {
         const timeout = setTimeout(() => {
           setPhase("waiting")
-        }, 2000)
+        }, 800)
         return () => clearTimeout(timeout)
       }
     }
@@ -48,7 +48,7 @@ export function TypewriterText() {
       const timeout = setTimeout(() => {
         setPhase("highlighting")
         setHighlightProgress(0)
-      }, 500)
+      }, 200)
       return () => clearTimeout(timeout)
     }
 

@@ -16,7 +16,7 @@ export function Navbar() {
   return (
     <>
       {/* Lunar-themed Navbar */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-[#0a0d12] border-b border-slate-800/60">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-black/40 backdrop-blur-xl border-b border-slate-800/60">
         {/* Subtle lunar glow at top */}
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-slate-400/20 to-transparent" />
         
@@ -74,10 +74,14 @@ export function Navbar() {
             <div className="hidden md:block">
               <a
                 href="#demo"
-                className="relative inline-flex items-center justify-center rounded-lg bg-slate-50 px-6 py-2.5 text-sm font-semibold text-slate-900 overflow-hidden group"
+                className="glare-button relative inline-flex items-center justify-center rounded-lg bg-slate-50 px-6 py-2.5 text-sm font-semibold text-slate-900 overflow-hidden transition-all duration-200 hover:bg-slate-200 border border-slate-200 hover:border-slate-400"
+                style={{
+                  '--gh-rgba': 'rgba(30, 41, 59, 0.4)',
+                  '--gh-angle': '-45deg',
+                  '--gh-size': '200%',
+                  '--gh-duration': '1000ms'
+                }}
               >
-                {/* Lunar shimmer effect */}
-                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
                 <span className="relative">Request Demo</span>
               </a>
             </div>
@@ -104,7 +108,7 @@ export function Navbar() {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div
-          className="fixed inset-0 z-40 bg-[#0a0d12] md:hidden"
+          className="fixed inset-0 z-40 bg-black/95 backdrop-blur-xl md:hidden"
           onClick={() => setIsMobileMenuOpen(false)}
         >
           <div className="flex min-h-screen flex-col items-center justify-center px-6">

@@ -1,46 +1,48 @@
 "use client"
 
 const partners = [
-  { name: "Microsoft for Startups", logo: "" },
-  { name: "Pegasus", logo: "" },
-  { name: "CMU Schwartz Center", logo: "" },
-  { name: "Mar Ventures", logo: "" },
-  { name: "InfoSys", logo: "" },
+  { name: "Microsoft for Startups", logo: "/Microsoft-for-Startups.png" },
+  { name: "CMU Schwartz Center", logo: "/Schwartz-Center.png" },
+  { name: "Pegasus Ignite", logo: "/Pegasus-Ignite.png" },
+  { name: "Confluence", logo: "/Confluence.png" },
+  { name: "InfoSys", logo: "/Infosys.png" },
 ]
 
 export function PartnershipSection() {
-  return (
-    <section className="relative py-24 bg-transparent">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="flex flex-col items-center text-center space-y-10">
-          {/* Logos Row */}
-          <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-10 md:gap-x-20 opacity-80">
-            {partners.map((partner) => (
-              <div
-                key={partner.name}
-                className="flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-200"
-              >
-                {/* Use img if you have SVGs, otherwise fallback to text */}
-                {partner.logo.endsWith(".svg") ? (
-                  <img
-                    src={partner.logo}
-                    alt={partner.name}
-                    className="h-8 md:h-10 w-auto opacity-80 hover:opacity-100 transition-opacity duration-200"
-                  />
-                ) : (
-                  <span className="text-sm md:text-base font-medium text-neutral-400 hover:text-white transition-all duration-200">
-                    {partner.name}
-                  </span>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+  const getLogoSize = (name: string) => {
+    if (name === "Pegasus Ignite") {
+      return "h-10"; // 80px - biggest
+    }
+    if (name === "Microsoft for Startups") {
+      return "h-20"; // 80px - bigger
+    }
+    if (name === "CMU Schwartz Center") {
+      return "h-17"; // 64px - bigger
+    }
+    if (name === "Confluence") {
+      return "h-7.5"; // 32px - smaller
+    }
+    return "h-9"; // 40px - default
+  };
 
-      {/* Soft lunar glow behind logos */}
-      <div className="pointer-events-none absolute inset-0 flex justify-center">
-        <div className="h-48 w-48 md:h-72 md:w-72 rounded-full bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.08),transparent_70%)] blur-3xl" />
+  return (
+    <section className="relative py-16 overflow-hidden">
+      <div className="relative mx-auto max-w-7xl px-6">
+        {/* Clean partner row */}
+        <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8 lg:gap-10">
+          {partners.map((partner) => (
+            <div
+              key={partner.name}
+              className={`group ${partner.name === "InfoSys" ? "translate-y-1" : ""}`}
+            >
+              <img
+                src={partner.logo}
+                alt={partner.name}
+                className={`w-auto opacity-80 group-hover:opacity-100 transition-opacity duration-300 brightness-0 invert group-hover:brightness-100 group-hover:invert-0 ${getLogoSize(partner.name)}`}
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   )
