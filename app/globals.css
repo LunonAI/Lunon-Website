@@ -181,6 +181,90 @@
   }
 }
 
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  33% {
+    transform: translate(15px, -25px);
+  }
+  66% {
+    transform: translate(-15px, -15px);
+  }
+}
+
+@keyframes floatMedium {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  33% {
+    transform: translate(-20px, -20px);
+  }
+  66% {
+    transform: translate(20px, -30px);
+  }
+}
+
+@keyframes floatFast {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(10px, -35px);
+  }
+}
+
+@keyframes particleFloat1 {
+  0% {
+    transform: translateY(0px);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-80px);
+    opacity: 0;
+  }
+}
+
+@keyframes particleFloat2 {
+  0% {
+    transform: translateY(0px);
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+}
+
+@keyframes particleFloat3 {
+  0% {
+    transform: translateY(0px);
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-120px);
+    opacity: 0;
+  }
+}
+
 @keyframes twinkle {
   0%, 100% {
     opacity: 0.3;
@@ -189,6 +273,23 @@
   50% {
     opacity: 1;
     transform: scale(1.2);
+  }
+}
+
+@keyframes shootingStar {
+  0% {
+    transform: translateX(0) translateY(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(300px) translateY(300px);
+    opacity: 0;
   }
 }
 
@@ -266,8 +367,56 @@
     animation: float 6s ease-in-out infinite;
   }
   
+  .animate-float-slow {
+    animation: floatSlow 8s ease-in-out infinite;
+  }
+  
+  .animate-float-medium {
+    animation: floatMedium 10s ease-in-out infinite;
+  }
+  
+  .animate-float-fast {
+    animation: floatFast 6s ease-in-out infinite;
+  }
+  
+  .animate-float-delayed {
+    animation: floatSlow 9s ease-in-out 1s infinite;
+  }
+  
+  .animate-particle-float-1 {
+    animation: particleFloat1 8s ease-in-out infinite;
+  }
+  
+  .animate-particle-float-2 {
+    animation: particleFloat2 10s ease-in-out 2s infinite;
+  }
+  
+  .animate-particle-float-3 {
+    animation: particleFloat3 12s ease-in-out 4s infinite;
+  }
+  
   .animate-twinkle {
     animation: twinkle 3s ease-in-out infinite;
+  }
+  
+  .animate-twinkle-delayed {
+    animation: twinkle 4s ease-in-out 1s infinite;
+  }
+  
+  .animate-twinkle-slow {
+    animation: twinkle 5s ease-in-out 2s infinite;
+  }
+  
+  .animate-shooting-star {
+    animation: shootingStar 3s ease-out infinite;
+  }
+  
+  .animate-shooting-star-delayed {
+    animation: shootingStar 4s ease-out 1.5s infinite;
+  }
+  
+  .animate-shooting-star-slow {
+    animation: shootingStar 5s ease-out 2.5s infinite;
   }
   
   .animate-orbit {
@@ -348,7 +497,27 @@
     82vw 68vh 1px 0px white,
     92vw 18vh 1px 0px white,
     8vw 48vh 1px 0px white,
-    18vw 92vh 1px 0px white;
+    18vw 92vh 1px 0px white,
+    3vw 102vh 1px 0px white,
+    13vw 115vh 1px 0px white,
+    23vw 108vh 1px 0px white,
+    33vw 125vh 1px 0px white,
+    43vw 118vh 1px 0px white,
+    53vw 105vh 1px 0px white,
+    63vw 122vh 1px 0px white,
+    73vw 112vh 1px 0px white,
+    83vw 128vh 1px 0px white,
+    93vw 110vh 1px 0px white,
+    7vw 135vh 1px 0px white,
+    17vw 120vh 1px 0px white,
+    27vw 138vh 1px 0px white,
+    37vw 125vh 1px 0px white,
+    47vw 132vh 1px 0px white,
+    57vw 115vh 1px 0px white,
+    67vw 140vh 1px 0px white,
+    77vw 128vh 1px 0px white,
+    87vw 135vh 1px 0px white,
+    97vw 118vh 1px 0px white;
   opacity: 0.5;
   animation: starScatter1 0.5s ease-out forwards;
 }
@@ -388,7 +557,27 @@
     89vw 92vh 1px 0px white,
     14vw 48vh 1px 0px white,
     24vw 15vh 1px 0px white,
-    34vw 75vh 1px 0px white;
+    34vw 75vh 1px 0px white,
+    4vw 108vh 1px 0px white,
+    14vw 122vh 1px 0px white,
+    24vw 112vh 1px 0px white,
+    34vw 128vh 1px 0px white,
+    44vw 115vh 1px 0px white,
+    54vw 108vh 1px 0px white,
+    64vw 135vh 1px 0px white,
+    74vw 118vh 1px 0px white,
+    84vw 125vh 1px 0px white,
+    94vw 112vh 1px 0px white,
+    9vw 140vh 1px 0px white,
+    19vw 128vh 1px 0px white,
+    29vw 135vh 1px 0px white,
+    39vw 120vh 1px 0px white,
+    49vw 138vh 1px 0px white,
+    59vw 125vh 1px 0px white,
+    69vw 132vh 1px 0px white,
+    79vw 115vh 1px 0px white,
+    89vw 140vh 1px 0px white,
+    11vw 128vh 1px 0px white;
   opacity: 0.4;
   animation: starScatter2 0.5s ease-out 0.05s forwards;
 }
@@ -418,7 +607,26 @@
     86vw 62vh 1px 0px white,
     6vw 75vh 1px 0px white,
     28vw 22vh 1px 0px white,
-    48vw 92vh 1px 0px white;
+    48vw 92vh 1px 0px white,
+    5vw 105vh 1px 0px white,
+    15vw 118vh 1px 0px white,
+    25vw 110vh 1px 0px white,
+    35vw 132vh 1px 0px white,
+    45vw 122vh 1px 0px white,
+    55vw 108vh 1px 0px white,
+    65vw 128vh 1px 0px white,
+    75vw 115vh 1px 0px white,
+    85vw 135vh 1px 0px white,
+    95vw 120vh 1px 0px white,
+    8vw 138vh 1px 0px white,
+    18vw 125vh 1px 0px white,
+    28vw 140vh 1px 0px white,
+    38vw 128vh 1px 0px white,
+    58vw 132vh 1px 0px white,
+    68vw 118vh 1px 0px white,
+    78vw 140vh 1px 0px white,
+    88vw 130vh 1px 0px white,
+    98vw 122vh 1px 0px white;
   opacity: 0.6;
   filter: blur(0.5px);
   animation: starScatter3 0.5s ease-out 0.1s forwards;

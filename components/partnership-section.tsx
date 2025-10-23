@@ -26,7 +26,7 @@ export function PartnershipSection() {
   };
 
   return (
-    <section className="relative py-16 overflow-hidden">
+    <section className="relative pt-16 pb-0 overflow-hidden -mb-6">
       <div className="relative mx-auto max-w-7xl px-6">
         {/* Clean partner row */}
         <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8 lg:gap-10">

@@ -43,7 +43,7 @@ export function Product() {
         </svg>
       ),
       title: "Seamless Integration",
-      description: "Connect with tools you already use. Google Drive, SharePoint, Salesforce, and more."
+      description: "Connect with tools you already use. Google Suite, OneDrive, Dropbox, and more."
     },
     {
       icon: (
@@ -57,7 +57,7 @@ export function Product() {
   ]
 
   return (
-    <section id="product" className="py-20 md:py-32 border-b border-slate-700/30">
+    <section id="product" className="pt-24 pb-20 md:pt-28 md:pb-32 border-b border-slate-700/30">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header */}

@@ -59,8 +59,23 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Partnership Section */}
-        <PartnershipSection />
+        {/* Partnership Section - with starfield continuation */}
+        <div className="relative">
+          {/* Continue starfield from hero */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="stars-layer-1" />
+            <div className="stars-layer-2" />
+            <div className="stars-layer-3" />
+          </div>
+          
+          <PartnershipSection />
+        </div>
+
+        {/* Smooth Gradient Transition */}
+        <div className="relative h-48 overflow-hidden">
+          {/* Stronger gradient with visible color shift */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black via-[#050a12] via-[30%] via-[#0a1120] via-[50%] via-[#0f172a] via-[70%] to-slate-900" />
+        </div>
 
         {/* Other sections with consistent lighter background */}
         <div className="relative bg-slate-900">

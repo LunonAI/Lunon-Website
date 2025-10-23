@@ -2,7 +2,6 @@
 
 import Image from "next/image"
 import { useRouter } from "next/navigation"
-import { Button } from "@/components/ui/button"
 
 export function BuiltBy() {
   const router = useRouter()
@@ -36,12 +35,18 @@ export function BuiltBy() {
 
           {/* CTA */}
           <div className="text-center">
-            <Button
+            <button
               onClick={() => router.push("/about")}
-              className="bg-slate-700 text-slate-50 hover:bg-slate-600 shadow-lg hover:shadow-xl transition-all"
+              className="glare-button bg-slate-700 text-slate-50 hover:bg-slate-600 px-8 py-3 text-base font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all cursor-pointer"
+              style={{
+                '--gh-rgba': 'rgba(148, 163, 184, 0.3)',
+                '--gh-angle': '-45deg',
+                '--gh-size': '200%',
+                '--gh-duration': '1000ms'
+              } as React.CSSProperties}
             >
               Meet the Team
-            </Button>
+            </button>
           </div>
         </div>
       </div>
