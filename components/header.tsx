@@ -22,10 +22,10 @@ export function Header() {
 
   return (
     <header 
-      className="sticky top-0 z-50 w-full border-b backdrop-blur-sm" 
+      className="sticky top-0 z-50 w-full border-b backdrop-blur-xl" 
       style={{ 
-        backgroundColor: 'rgba(255, 255, 255, 0.9)',
-        borderColor: 'var(--lunar-border)'
+        backgroundColor: 'rgba(0, 0, 0, 0.4)',
+        borderColor: 'rgba(71, 85, 105, 0.3)'
       }}
     >
       <div className="container mx-auto h-16 px-4">
@@ -43,22 +43,19 @@ export function Header() {
           <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 md:flex">
             <a 
               href="/#product" 
-              className="relative text-sm font-medium lunar-transition hover:opacity-70"
-              style={{ color: 'var(--lunar-text)' }}
+              className="relative text-sm font-medium lunar-transition hover:opacity-70 text-slate-200"
             >
               Product
             </a>
             <a 
               href="/about" 
-              className="relative text-sm font-medium lunar-transition hover:opacity-70"
-              style={{ color: 'var(--lunar-text)' }}
+              className="relative text-sm font-medium lunar-transition hover:opacity-70 text-slate-200"
             >
               About
             </a>
             <a 
               href="/#integrations" 
-              className="relative text-sm font-medium lunar-transition hover:opacity-70"
-              style={{ color: 'var(--lunar-text)' }}
+              className="relative text-sm font-medium lunar-transition hover:opacity-70 text-slate-200"
             >
               Integrations
             </a>
@@ -75,28 +72,38 @@ export function Header() {
               >
                 Switch project
               </LunarButton>
-              <LunarButton
-                size="md"
-                variant="primary"
-                onClick={() => router.push("/demo")}
+              <a
+                href="/demo"
+                className="glare-button relative inline-flex items-center justify-center rounded-lg bg-slate-50 px-6 py-2.5 text-sm font-semibold text-slate-900 overflow-hidden transition-all duration-200 hover:bg-slate-200 border border-slate-200 hover:border-slate-400"
+                style={{
+                  '--gh-rgba': 'rgba(30, 41, 59, 0.4)',
+                  '--gh-angle': '-45deg',
+                  '--gh-size': '200%',
+                  '--gh-duration': '1000ms'
+                } as React.CSSProperties}
               >
-                Request Demo
-              </LunarButton>
+                <span className="relative">Request Demo</span>
+              </a>
             </>
           ) : (
-            <LunarButton
-              size="md"
-              variant="primary"
-              onClick={() => router.push("/demo")}
+            <a
+              href="/demo"
+              className="glare-button relative inline-flex items-center justify-center rounded-lg bg-slate-50 px-6 py-2.5 text-sm font-semibold text-slate-900 overflow-hidden transition-all duration-200 hover:bg-slate-200 border border-slate-200 hover:border-slate-400"
+              style={{
+                '--gh-rgba': 'rgba(30, 41, 59, 0.4)',
+                '--gh-angle': '-45deg',
+                '--gh-size': '200%',
+                '--gh-duration': '1000ms'
+              } as React.CSSProperties}
             >
-              Request Demo
-            </LunarButton>
+              <span className="relative">Request Demo</span>
+            </a>
           )}
           </div>
 
           {/* MOBILE HAMBURGER */}
           <button
-            className="ml-auto md:hidden"
+            className="ml-auto md:hidden text-slate-200"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -110,29 +117,26 @@ export function Header() {
         <div 
           className="border-t md:hidden"
           style={{ 
-            borderColor: 'var(--lunar-border)', 
-            backgroundColor: 'var(--lunar-surface)' 
+            borderColor: 'rgba(71, 85, 105, 0.3)', 
+            backgroundColor: 'rgba(0, 0, 0, 0.9)' 
           }}
         >
           <nav className="container mx-auto flex flex-col gap-4 px-4 py-6">
             <a 
               href="/#product" 
-              className="text-sm font-medium lunar-transition hover:opacity-70"
-              style={{ color: 'var(--lunar-text)' }}
+              className="text-sm font-medium lunar-transition hover:opacity-70 text-slate-200"
             >
               Product
             </a>
             <a 
               href="/about" 
-              className="text-sm font-medium lunar-transition hover:opacity-70"
-              style={{ color: 'var(--lunar-text)' }}
+              className="text-sm font-medium lunar-transition hover:opacity-70 text-slate-200"
             >
               About
             </a>
             <a 
               href="/#integrations" 
-              className="text-sm font-medium lunar-transition hover:opacity-70"
-              style={{ color: 'var(--lunar-text)' }}
+              className="text-sm font-medium lunar-transition hover:opacity-70 text-slate-200"
             >
               Integrations
             </a>
@@ -142,14 +146,32 @@ export function Header() {
                   <LunarButton size="md" variant="secondary" onClick={() => router.push("/workspace")}>
                     Switch project
                   </LunarButton>
-                  <LunarButton size="md" variant="primary" onClick={() => router.push("/demo")}>
-                    Request Demo
-                  </LunarButton>
+                  <a
+                    href="/demo"
+                    className="glare-button relative inline-flex items-center justify-center rounded-lg bg-slate-50 px-6 py-2.5 text-sm font-semibold text-slate-900 overflow-hidden transition-all duration-200 hover:bg-slate-200 border border-slate-200 hover:border-slate-400"
+                    style={{
+                      '--gh-rgba': 'rgba(30, 41, 59, 0.4)',
+                      '--gh-angle': '-45deg',
+                      '--gh-size': '200%',
+                      '--gh-duration': '1000ms'
+                    } as React.CSSProperties}
+                  >
+                    <span className="relative">Request Demo</span>
+                  </a>
                 </>
               ) : (
-                <LunarButton size="md" variant="primary" onClick={() => router.push("/demo")}>
-                  Request Demo
-                </LunarButton>
+                <a
+                  href="/demo"
+                  className="glare-button relative inline-flex items-center justify-center rounded-lg bg-slate-50 px-6 py-2.5 text-sm font-semibold text-slate-900 overflow-hidden transition-all duration-200 hover:bg-slate-200 border border-slate-200 hover:border-slate-400"
+                  style={{
+                    '--gh-rgba': 'rgba(30, 41, 59, 0.4)',
+                    '--gh-angle': '-45deg',
+                    '--gh-size': '200%',
+                    '--gh-duration': '1000ms'
+                  } as React.CSSProperties}
+                >
+                  <span className="relative">Request Demo</span>
+                </a>
               )}
             </div>
           </nav>

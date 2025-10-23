@@ -1,6 +1,6 @@
 "use client"
 
-import { Header } from "@/components/header"
+import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -98,35 +98,35 @@ export default function DemoPage() {
 
   if (isSubmitted) {
     return (
-      <div className="min-h-screen bg-white">
-        <Header />
-        <main className="flex min-h-[calc(100vh-4rem)] items-center justify-center px-4 py-16">
+      <div className="min-h-screen bg-black">
+        <Navbar />
+        <main className="flex min-h-[calc(100vh-4rem)] items-center justify-center px-4 py-16 pt-24">
           <div className="mx-auto max-w-md text-center">
             <div className="mb-6 flex justify-center">
-              <div className="flex h-20 w-20 items-center justify-center rounded-full bg-[#522396]/10">
-                <CheckCircle2 className="h-10 w-10 text-[#522396]" />
+              <div className="flex h-20 w-20 items-center justify-center rounded-full bg-slate-700/30">
+                <CheckCircle2 className="h-10 w-10 text-slate-300" />
               </div>
             </div>
-            <h1 className="mb-4 text-3xl font-bold tracking-tight text-foreground">
+            <h1 className="mb-4 text-3xl font-bold tracking-tight text-white">
               Thank You!
             </h1>
-            <p className="mb-8 text-lg text-muted-foreground">
+            <p className="mb-8 text-lg text-slate-200">
               We've received your demo request. Our team will reach out within 1 business day to
               schedule a personalized demo.
             </p>
-            <div className="rounded-lg border border-[#522396]/20 bg-[#522396]/5 p-6 mb-8">
-              <p className="text-sm font-medium text-foreground mb-2">What happens next?</p>
-              <ul className="space-y-2 text-left text-sm text-muted-foreground">
+            <div className="rounded-lg border border-white/20 bg-white/5 backdrop-blur-sm p-6 mb-8">
+              <p className="text-sm font-medium text-white mb-2">What happens next?</p>
+              <ul className="space-y-2 text-left text-sm text-slate-200">
                 <li className="flex items-start gap-2">
-                  <span className="mt-0.5 h-1.5 w-1.5 rounded-full bg-[#522396] flex-shrink-0"></span>
+                  <span className="mt-0.5 h-1.5 w-1.5 rounded-full bg-slate-400 flex-shrink-0"></span>
                   <span>A solutions specialist will contact you via email</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="mt-0.5 h-1.5 w-1.5 rounded-full bg-[#522396] flex-shrink-0"></span>
+                  <span className="mt-0.5 h-1.5 w-1.5 rounded-full bg-slate-400 flex-shrink-0"></span>
                   <span>We'll learn about your specific needs and use cases</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="mt-0.5 h-1.5 w-1.5 rounded-full bg-[#522396] flex-shrink-0"></span>
+                  <span className="mt-0.5 h-1.5 w-1.5 rounded-full bg-slate-400 flex-shrink-0"></span>
                   <span>Schedule a live demo tailored to your workflow</span>
                 </li>
               </ul>
@@ -147,27 +147,27 @@ export default function DemoPage() {
   }
 
   return (
-    <div className="min-h-screen bg-white">
-      <Header />
-      <main className="mx-auto max-w-3xl px-4 py-16">
+    <div className="min-h-screen bg-black">
+      <Navbar />
+      <main className="mx-auto max-w-3xl px-4 py-16 pt-24">
         {/* Header Section */}
         <div className="mb-12 text-center">
-          <h1 className="mb-4 text-4xl font-bold tracking-tight text-foreground md:text-5xl">
+          <h1 className="mb-4 text-4xl font-bold tracking-tight text-white md:text-5xl">
             Request a Demo
           </h1>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-lg text-slate-200">
             See how Lunon can transform your consulting firm. Fill out the form below and we'll
             schedule a personalized demonstration.
           </p>
         </div>
 
         {/* Form Section */}
-        <div className="rounded-2xl border-2 border-[#522396]/20 bg-white p-8 shadow-sm md:p-12">
+        <div className="rounded-2xl border-2 border-white/10 bg-white/5 backdrop-blur-sm p-8 shadow-lg md:p-12">
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Full Name */}
             <div className="space-y-2">
-              <Label htmlFor="fullName">
-                Full Name <span className="text-[#522396]">*</span>
+              <Label htmlFor="fullName" className="text-slate-200">
+                Full Name <span className="text-slate-400">*</span>
               </Label>
               <Input
                 id="fullName"
@@ -185,8 +185,8 @@ export default function DemoPage() {
 
             {/* Work Email */}
             <div className="space-y-2">
-              <Label htmlFor="email">
-                Work Email <span className="text-[#522396]">*</span>
+              <Label htmlFor="email" className="text-slate-200">
+                Work Email <span className="text-slate-400">*</span>
               </Label>
               <Input
                 id="email"
@@ -204,8 +204,8 @@ export default function DemoPage() {
 
             {/* Company Name */}
             <div className="space-y-2">
-              <Label htmlFor="company">
-                Company Name <span className="text-[#522396]">*</span>
+              <Label htmlFor="company" className="text-slate-200">
+                Company Name <span className="text-slate-400">*</span>
               </Label>
               <Input
                 id="company"
@@ -223,8 +223,8 @@ export default function DemoPage() {
 
             {/* Company Size */}
             <div className="space-y-2">
-              <Label htmlFor="companySize">
-                Company Size <span className="text-[#522396]">*</span>
+              <Label htmlFor="companySize" className="text-slate-200">
+                Company Size <span className="text-slate-400">*</span>
               </Label>
               <Select
                 value={formData.companySize}
@@ -255,8 +255,8 @@ export default function DemoPage() {
 
             {/* Phone Number (Optional) */}
             <div className="space-y-2">
-              <Label htmlFor="phone">
-                Phone Number <span className="text-muted-foreground">(Optional)</span>
+              <Label htmlFor="phone" className="text-slate-200">
+                Phone Number <span className="text-slate-400">(Optional)</span>
               </Label>
               <Input
                 id="phone"
@@ -270,8 +270,8 @@ export default function DemoPage() {
 
             {/* Message / Use Case */}
             <div className="space-y-2">
-              <Label htmlFor="message">
-                Tell us about your use case <span className="text-[#522396]">*</span>
+              <Label htmlFor="message" className="text-slate-200">
+                Tell us about your use case <span className="text-slate-400">*</span>
               </Label>
               <Textarea
                 id="message"
@@ -293,7 +293,7 @@ export default function DemoPage() {
                 type="submit"
                 size="lg"
                 disabled={isSubmitting}
-                className="w-full bg-[#522396] text-white hover:bg-[#45158C] shadow-lg hover:shadow-xl transition-all"
+                className="w-full bg-slate-700 text-slate-50 hover:bg-slate-600 shadow-lg hover:shadow-xl transition-all"
               >
                 {isSubmitting ? (
                   <>
@@ -304,7 +304,7 @@ export default function DemoPage() {
                   "Request Demo"
                 )}
               </Button>
-              <p className="mt-4 text-center text-sm text-muted-foreground">
+              <p className="mt-4 text-center text-sm text-slate-300">
                 We respect your privacy. Your information will never be shared.
               </p>
             </div>
@@ -313,17 +313,17 @@ export default function DemoPage() {
 
         {/* Trust Signals */}
         <div className="mt-12 grid gap-6 sm:grid-cols-3 text-center">
-          <div className="rounded-lg border border-border bg-muted/30 p-6">
-            <p className="text-2xl font-bold text-[#522396]">24h</p>
-            <p className="mt-1 text-sm text-muted-foreground">Response time</p>
+          <div className="rounded-lg border border-white/10 bg-white/5 backdrop-blur-sm p-6">
+            <p className="text-2xl font-bold text-white">24h</p>
+            <p className="mt-1 text-sm text-slate-200">Response time</p>
           </div>
-          <div className="rounded-lg border border-border bg-muted/30 p-6">
-            <p className="text-2xl font-bold text-[#522396]">30min</p>
-            <p className="mt-1 text-sm text-muted-foreground">Demo duration</p>
+          <div className="rounded-lg border border-white/10 bg-white/5 backdrop-blur-sm p-6">
+            <p className="text-2xl font-bold text-white">30min</p>
+            <p className="mt-1 text-sm text-slate-200">Demo duration</p>
           </div>
-          <div className="rounded-lg border border-border bg-muted/30 p-6">
-            <p className="text-2xl font-bold text-[#522396]">No Obligation</p>
-            <p className="mt-1 text-sm text-muted-foreground">Zero commitment</p>
+          <div className="rounded-lg border border-white/10 bg-white/5 backdrop-blur-sm p-6">
+            <p className="text-2xl font-bold text-white">No Obligation</p>
+            <p className="mt-1 text-sm text-slate-200">Zero commitment</p>
           </div>
         </div>
       </main>
