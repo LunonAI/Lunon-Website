@@ -258,11 +258,11 @@ export default function AboutPage() {
                 <div className="space-y-4">
                   <button
                     onClick={() => router.push("/demo")}
-                    className="w-full group flex items-center justify-between bg-slate-700 text-slate-50 hover:bg-slate-600 px-6 py-3 rounded-lg font-medium shadow-lg hover:shadow-xl transition-all"
+                    className="w-full h-[50px] group flex items-center justify-between bg-slate-700 text-slate-50 hover:bg-slate-600 px-6 rounded-lg font-medium shadow-lg hover:shadow-xl transition-colors"
                   >
-                    <span>View Open Positions</span>
+                    <span className="text-left">View Open Positions</span>
                     <svg
-                      className="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                      className="w-5 h-5 flex-shrink-0 group-hover:translate-x-1 transition-transform"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -276,7 +276,7 @@ export default function AboutPage() {
                     </svg>
                   </button>
                   
-                  <div className="relative">
+                  <div className="relative h-[20px]">
                     <div className="absolute inset-0 flex items-center">
                       <div className="w-full border-t border-slate-700"></div>
                     </div>
@@ -287,22 +287,20 @@ export default function AboutPage() {
                   
                   <button
                     onClick={copyEmail}
-                    className={`w-full group flex items-center justify-between px-6 py-3 rounded-lg font-medium transition-all ${
+                    className={`w-full h-[50px] group flex items-center justify-between px-6 rounded-lg font-medium border transition-colors ${
                       showCopied
                         ? 'bg-green-600 border-green-600 text-white'
-                        : 'border border-slate-700 hover:border-slate-600 text-slate-300 hover:text-white'
+                        : 'border-slate-700 hover:border-slate-600 text-slate-300 hover:text-white'
                     }`}
                   >
-                    <span>{showCopied ? 'Email copied!' : 'Email us directly'}</span>
-                    {showCopied ? (
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <span className="text-left">{showCopied ? 'Email copied!' : 'Email us directly'}</span>
+                    <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      {showCopied ? (
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                    ) : (
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      ) : (
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                      </svg>
-                    )}
+                      )}
+                    </svg>
                   </button>
                 </div>
               </div>
