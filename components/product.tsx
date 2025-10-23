@@ -57,7 +57,7 @@ export function Product() {
   ]
 
   return (
-    <section id="product" className="pt-24 pb-20 md:pt-28 md:pb-32 border-b border-slate-700/30">
+    <section id="product" className="pt-16 pb-20 md:pt-20 md:pb-32 border-b border-slate-700/30">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header */}

@@ -1,13 +1,12 @@
 "use client"
 
 import { useState } from "react"
-import { Menu, X } from "lucide-react"
+import { Menu, X, Play } from "lucide-react"
 
 const navItems = [
-  { name: "Product", href: "#product" },
-  { name: "Integrations", href: "#integrations" },
-  { name: "Team", href: "#team" },
-  { name: "About", href: "/about" },
+  { name: "Product", href: "/#product" },
+  { name: "Integrations", href: "/#integrations" },
+  { name: "Team", href: "/about" },
 ]
 
 export function Navbar() {
@@ -16,7 +15,7 @@ export function Navbar() {
   return (
     <>
       {/* Lunar-themed Navbar */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-black/40 backdrop-blur-xl border-b border-slate-800/60">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-black border-b border-slate-800/60">
         {/* Subtle lunar glow at top */}
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-slate-400/20 to-transparent" />
         
@@ -74,7 +73,7 @@ export function Navbar() {
             <div className="hidden md:block">
               <a
                 href="/demo"
-                className="glare-button relative inline-flex items-center justify-center rounded-lg bg-slate-50 px-6 py-2.5 text-sm font-semibold text-slate-900 overflow-hidden transition-all duration-200 hover:bg-slate-200 border border-slate-200 hover:border-slate-400"
+                className="glare-button relative inline-flex items-center justify-center gap-2 rounded-lg bg-slate-50 px-6 py-2.5 text-sm font-semibold text-slate-900 overflow-hidden transition-all duration-200 hover:bg-slate-200 border border-slate-200 hover:border-slate-400"
                 style={{
                   '--gh-rgba': 'rgba(30, 41, 59, 0.4)',
                   '--gh-angle': '-45deg',
@@ -82,7 +81,8 @@ export function Navbar() {
                   '--gh-duration': '1000ms'
                 } as React.CSSProperties}
               >
-                <span className="relative">Request Demo</span>
+                <Play className="relative h-4 w-4 fill-slate-900" />
+                <span className="relative">See Demo</span>
               </a>
             </div>
 
@@ -108,7 +108,7 @@ export function Navbar() {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div
-          className="fixed inset-0 z-40 bg-black/95 backdrop-blur-xl md:hidden"
+          className="fixed inset-0 z-40 bg-black md:hidden"
           onClick={() => setIsMobileMenuOpen(false)}
         >
           <div className="flex min-h-screen flex-col items-center justify-center px-6">
@@ -136,12 +136,13 @@ export function Navbar() {
               <a
                 href="/demo"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="mt-4 inline-flex items-center justify-center rounded-lg bg-slate-50 px-8 py-3 text-base font-semibold text-slate-900"
+                className="mt-4 inline-flex items-center justify-center gap-2 rounded-lg bg-slate-50 px-8 py-3 text-base font-semibold text-slate-900"
                 style={{
                   animation: "fadeInUp 0.3s ease-out 0.4s both",
                 }}
               >
-                Request Demo
+                <Play className="h-4 w-4 fill-slate-900" />
+                See Demo
               </a>
             </nav>
           </div>
