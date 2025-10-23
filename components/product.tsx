@@ -1,4 +1,13 @@
+"use client"
+
+import { useState } from "react"
+
 export function Product() {
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null)
+
+  const toggleExpand = (index: number) => {
+    setExpandedIndex(expandedIndex === index ? null : index)
+  }
   const benefits = [
     {
       icon: (
@@ -61,18 +70,59 @@ export function Product() {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-16 max-w-3xl mx-auto">
-            <h2 className="mb-6 text-3xl font-bold tracking-tight text-white md:text-4xl lg:text-5xl">
+          <div className="text-left md:text-center mb-12 md:mb-16 max-w-3xl md:mx-auto">
+            <h2 className="mb-4 md:mb-6 text-3xl font-bold tracking-tight text-white md:text-4xl lg:text-5xl">
               Why Leading Firms Choose Lunon
             </h2>
-            <p className="text-lg text-slate-200 max-w-2xl mx-auto">
+            <p className="text-base md:text-lg text-slate-200 max-w-2xl md:mx-auto">
               Transform scattered documents into your firm's competitive advantage. 
               Lunon turns institutional knowledge into instant, actionable intelligence.
             </p>
           </div>
 
-          {/* Benefits Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Mobile: Accordion Style */}
+          <div className="md:hidden space-y-3">
+            {benefits.map((benefit, index) => (
+              <div 
+                key={index}
+                className="rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 overflow-hidden transition-all duration-300"
+              >
+                <button
+                  onClick={() => toggleExpand(index)}
+                  className="w-full flex items-center justify-between p-4 text-left hover:bg-white/5 transition-colors"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center text-slate-200">
+                      {benefit.icon}
+                    </div>
+                    <h3 className="text-base font-semibold text-white">
+                      {benefit.title}
+                    </h3>
+                  </div>
+                  <svg 
+                    className={`w-5 h-5 text-slate-400 transition-transform duration-300 flex-shrink-0 ${expandedIndex === index ? 'rotate-180' : ''}`}
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <div 
+                  className={`overflow-hidden transition-all duration-300 ${
+                    expandedIndex === index ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
+                  }`}
+                >
+                  <p className="px-4 pb-4 pl-[3.75rem] text-sm text-slate-200 leading-relaxed">
+                    {benefit.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Desktop: Grid */}
+          <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
               <div 
                 key={index}

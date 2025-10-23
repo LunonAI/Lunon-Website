@@ -11,11 +11,11 @@ export function BuiltBy() {
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-5xl">
           {/* Header */}
-          <div className="text-center mb-12">
+          <div className="text-left md:text-center mb-12">
             <h2 className="mb-4 text-3xl font-bold tracking-tight text-white md:text-4xl lg:text-5xl">
               Engineered at Carnegie Mellon
             </h2>
-            <p className="text-lg text-slate-200 max-w-2xl mx-auto">
+            <p className="text-base md:text-lg text-slate-200 max-w-2xl md:mx-auto">
               Lunon was founded by students from Carnegie Mellon with a clear goal: to help 
               consulting firms unlock the full value of their internal knowledge. Our AI infrastructure transforms 
               complex data and documents into insights that drive better decisions.

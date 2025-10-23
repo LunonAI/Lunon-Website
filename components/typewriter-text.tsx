@@ -119,7 +119,7 @@ export function TypewriterText() {
   const isRetracting = phase === "retracting"
 
   return (
-    <div className="flex flex-col items-center lg:items-start gap-2">
+    <div className="flex flex-col items-start gap-2">
       {/* Static text line */}
       <div className="text-xl md:text-2xl lg:text-3xl text-slate-300 leading-relaxed font-normal">
         Lunon, your secure AI hub for

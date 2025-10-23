@@ -110,11 +110,11 @@ export default function AboutPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               {/* Section Header */}
-              <div className="text-center mb-16">
+              <div className="text-left md:text-center mb-16">
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-4">
                   Meet Our Team
                 </h2>
-                <p className="text-lg text-slate-200 max-w-2xl mx-auto">
+                <p className="text-base md:text-lg text-slate-200 max-w-2xl md:mx-auto">
                   Carnegie Mellon students using AI to reinvent consulting by transforming scattered knowledge into powerful insights that drive smarter decisions.
                 </p>
               </div>
@@ -150,7 +150,7 @@ export default function AboutPage() {
                         <p className="text-slate-300 text-base font-medium mb-2">
                           {member.role}
                         </p>
-                        <p className="text-base text-slate-350 leading-relaxed mb-6" style={{ color: '#b0b8c3' }}>
+                        <p className="hidden md:block text-base text-slate-350 leading-relaxed mb-6" style={{ color: '#b0b8c3' }}>
                           {member.bio}
                         </p>
                         
@@ -207,7 +207,7 @@ export default function AboutPage() {
                         <p className="text-slate-300 text-base font-medium mb-2">
                           {member.role}
                         </p>
-                        <p className="text-base text-slate-350 leading-relaxed mb-6" style={{ color: '#b0b8c3' }}>
+                        <p className="hidden md:block text-base text-slate-350 leading-relaxed mb-6" style={{ color: '#b0b8c3' }}>
                           {member.bio}
                         </p>
                         

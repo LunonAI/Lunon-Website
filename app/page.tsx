@@ -24,7 +24,7 @@ export default function Home() {
           <div className="w-full relative z-10">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               {/* Left Column - Text Content */}
-              <div className="space-y-8 text-center lg:text-left max-w-2xl mx-auto lg:mx-0 px-6 lg:pl-12 lg:pr-0">
+              <div className="space-y-8 text-left max-w-2xl px-6 lg:pl-12 lg:pr-0">
                 <h1 className="text-5xl/tight md:text-6xl/tight lg:text-7xl/tight font-semibold text-slate-50 tracking-tight">
                   Powering smarter <span className="text-slate-100">consulting.</span>
                 </h1>
@@ -32,7 +32,7 @@ export default function Home() {
                 {/* Description with Typewriter */}
                 <TypewriterText />
 
-                <div className="pt-6">
+                <div className="pt-6 space-y-3">
                   <button 
                     className="glare-button bg-slate-50 text-slate-900 px-8 py-3 text-base font-semibold rounded-lg shadow-lg transition-all duration-200 hover:shadow-xl hover:bg-slate-200 border border-slate-200 hover:border-slate-400 cursor-pointer"
                     style={{
@@ -45,11 +45,14 @@ export default function Home() {
                   >
                     Redefine Performance
                   </button>
+                  <p className="text-xs text-slate-400 text-left pl-[2.1rem]">
+                    30-day money back guarantee
+                  </p>
                 </div>
               </div>
 
               {/* Right Column - Product Screenshot */}
-              <div className="px-6 lg:px-0 lg:pr-0">
+              <div className="pr-0 lg:pr-0">
                 <HeroImage />
               </div>
             </div>
@@ -57,12 +60,12 @@ export default function Home() {
         </section>
 
         {/* Partnership Section */}
-        <div className="relative">
+        <div className="relative z-10">
           <PartnershipSection />
         </div>
 
         {/* Smooth Gradient Transition */}
-        <div className="relative h-32 overflow-hidden">
+        <div className="relative h-32">
           {/* Stronger gradient with visible color shift */}
           <div className="absolute inset-0 bg-gradient-to-b from-black via-[#050a12] via-[30%] via-[#0a1120] via-[50%] via-[#0f172a] via-[70%] to-slate-900" />
         </div>

@@ -151,11 +151,11 @@ export default function DemoPage() {
       <Navbar />
       <main className="mx-auto max-w-3xl px-4 py-16 pt-24">
         {/* Header Section */}
-        <div className="mb-12 text-center">
+        <div className="mb-12 text-left md:text-center">
           <h1 className="mb-4 text-4xl font-bold tracking-tight text-white md:text-5xl">
             Request a Demo
           </h1>
-          <p className="text-lg text-slate-200">
+          <p className="text-base md:text-lg text-slate-200">
             See how Lunon can transform your consulting firm. Fill out the form below and we'll
             schedule a personalized demonstration.
           </p>
