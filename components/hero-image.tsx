@@ -12,7 +12,7 @@ export function HeroImage() {
 
         <div className="relative rounded-lg overflow-hidden border border-slate-600/40 bg-slate-900/50 backdrop-blur-sm shadow-[0_0_50px_rgba(255,255,255,0.16)] lg:rounded-r-none lg:border-r-0 w-full lg:w-auto">
           <img
-            src="/kenley.png"
+            src="/LunonUI.png"
             alt="Lunon Platform Interface"
             className="w-full h-auto object-contain relative z-10"
             style={{ filter: 'brightness(0.9)' }}
