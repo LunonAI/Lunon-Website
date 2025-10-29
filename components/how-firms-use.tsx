@@ -79,7 +79,7 @@ export function HowFirmsUse() {
             ))}
           </div>
 
-          {/* Desktop: 2x2 Grid with Moonlight Aesthetic */}
+          {/* Desktop: 2x2 Grid with Minimalist Reveal */}
           <div className="hidden md:grid md:grid-cols-2 border border-slate-600/40 rounded-2xl overflow-hidden bg-gradient-to-br from-slate-800/20 via-slate-900/40 to-slate-800/20 backdrop-blur-sm shadow-2xl">
             {useCases.map((useCase, index) => (
               <motion.div
@@ -92,10 +92,20 @@ export function HowFirmsUse() {
                   ${index === 1 ? 'border-b border-slate-600/40' : ''}
                   ${index === 2 ? 'border-r border-slate-600/40' : ''}
                 `}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial={{ 
+                  opacity: 0,
+                  y: 30
+                }}
+                whileInView={{ 
+                  opacity: 1,
+                  y: 0
+                }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ 
+                  duration: 1.2,
+                  delay: index < 2 ? 0 : 0.3,
+                  ease: [0.16, 1, 0.3, 1]
+                }}
               >
                 {/* Moonlight glow on hover */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">

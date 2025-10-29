@@ -20,7 +20,7 @@ export function PartnershipSection() {
       return "h-17"; // 64px - bigger
     }
     if (name === "Confluence") {
-      return "h-6"; // smaller
+      return "h-7"; // smaller
     }
     return "h-9"; // 40px - default
   };
@@ -33,7 +33,7 @@ export function PartnershipSection() {
           {partners.map((partner) => (
             <div
               key={partner.name}
-              className={`group ${partner.name === "InfoSys" ? "translate-y-1" : ""}`}
+              className={`group ${partner.name === "InfoSys" ? "translate-y-0.5" : ""}`}
             >
               <img
                 src={partner.logo}
