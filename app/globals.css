@@ -448,6 +448,15 @@
   }
 }
 
+@keyframes scan {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
 @layer utilities {
   .animate-shimmer {
     animation: shimmer 3s ease-in-out infinite;

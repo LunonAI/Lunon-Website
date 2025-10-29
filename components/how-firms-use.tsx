@@ -187,3 +187,6 @@ export function Integrations() {
   )
 }
 
+// Backwards-compatible export for the renamed section
+export const HowFirmsUse = Integrations
+

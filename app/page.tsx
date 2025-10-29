@@ -6,7 +6,7 @@ import { HeroImage } from "@/components/hero-image"
 import { PartnershipSection } from "@/components/partnership-section"
 import { Product } from "@/components/product"
 import { BuiltBy } from "@/components/built-by"
-import { Integrations } from "@/components/integrations"
+import { HowFirmsUse } from "@/components/how-firms-use"
 import { Footer } from "@/components/footer"
 import { Starfield } from "@/components/starfield"
 import { ChevronRight } from "lucide-react"
@@ -119,7 +119,7 @@ export default function Home() {
         {/* Other sections with consistent lighter background */}
         <div className="relative bg-slate-900">
           <Product />
-          <Integrations />
+          <HowFirmsUse />
           <BuiltBy />
         </div>
       </main>
