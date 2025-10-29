@@ -4,9 +4,18 @@ import { useState, useEffect, useRef } from "react"
 
 export function HeroImage() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
+  const [isDesktop, setIsDesktop] = useState(false)
   const containerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
+    // Check if we're on desktop
+    const checkDesktop = () => {
+      setIsDesktop(window.innerWidth >= 1024)
+    }
+    
+    checkDesktop()
+    window.addEventListener('resize', checkDesktop)
+    
     const handleMouseMove = (e: MouseEvent) => {
       // Only enable rotation on desktop
       if (window.innerWidth < 1024) return
@@ -20,7 +29,10 @@ export function HeroImage() {
     }
 
     window.addEventListener('mousemove', handleMouseMove)
-    return () => window.removeEventListener('mousemove', handleMouseMove)
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove)
+      window.removeEventListener('resize', checkDesktop)
+    }
   }, [])
 
   return (
@@ -39,7 +51,7 @@ export function HeroImage() {
         <div 
           className="relative w-full transition-transform duration-300 ease-out"
           style={{
-            transform: window.innerWidth >= 1024 ? `rotateY(${mousePos.x}deg) rotateX(${mousePos.y}deg)` : 'none',
+            transform: isDesktop ? `rotateY(${mousePos.x}deg) rotateX(${mousePos.y}deg)` : 'none',
             transformStyle: 'preserve-3d'
           }}
         >
