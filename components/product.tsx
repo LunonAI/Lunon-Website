@@ -25,7 +25,7 @@ export function Product() {
         </svg>
       ),
       title: "Secure by Design",
-      description: "Your firm's data is encrypted, access-controlled, and always private."
+      description: "Your firm's data is encrypted, access-controlled, and private."
     },
     {
       icon: (
@@ -34,7 +34,7 @@ export function Product() {
         </svg>
       ),
       title: "Built for Teams",
-      description: "Share, collaborate, and move faster together."
+      description: "Share, collaborate, and move faster together across projects."
     },
     {
       icon: (
@@ -43,7 +43,7 @@ export function Product() {
         </svg>
       ),
       title: "Enhances Expertise",
-      description: "AI that empowers consultants, not replaces them."
+      description: "AI built to empower people, not replace"
     }
   ]
 
