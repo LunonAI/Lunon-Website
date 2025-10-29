@@ -50,11 +50,11 @@ export default function AboutPage() {
 
   const teamMembers = [
     {
-      name: "Harrison Zoccoli",
-      role: "AI Engineer",
-      image: "/Harrison.jpg",
-      bio: "Finance student.",
-      linkedin: "https://www.linkedin.com/in/harrison-zoccoli/",
+      name: "Hannah Wyatt",
+      role: "Creative Marketing Specialist",
+      image: "/Hannah.png",
+      bio: "Film student.",
+      linkedin: "https://www.linkedin.com/in/hannahwyattusa/",
     },
     {
       name: "Osahan Belo-Osagie",
