@@ -16,9 +16,7 @@ export function BuiltBy() {
               Engineered at Carnegie Mellon
             </h2>
             <p className="text-base md:text-lg text-slate-200 max-w-2xl md:mx-auto">
-              Lunon was founded by students from Carnegie Mellon with a clear goal: to help 
-              consulting firms unlock the full value of their internal knowledge. Our AI infrastructure transforms 
-              complex data and documents into insights that drive better decisions.
+              Developed within one of the world's leading AI research hubs, Lunon was created by a team combining technical innovation, consulting experience, and design thinking to make firm knowledge more accessible.
             </p>
           </div>
 

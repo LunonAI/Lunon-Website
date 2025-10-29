@@ -15,8 +15,8 @@ export function Product() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
         </svg>
       ),
-      title: "Instant Knowledge Retrieval",
-      description: "Find any insight across thousands of documents in seconds. No more digging through folders."
+      title: "Find Anything Fast",
+      description: "Search thousands of internal files instantly."
     },
     {
       icon: (
@@ -24,8 +24,8 @@ export function Product() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
         </svg>
       ),
-      title: "Enterprise-Grade Security",
-      description: "Bank-level encryption and compliance. Your data stays yours, always private and protected."
+      title: "Secure by Design",
+      description: "Your firm's data is encrypted, access-controlled, and always private."
     },
     {
       icon: (
@@ -34,7 +34,7 @@ export function Product() {
         </svg>
       ),
       title: "Built for Teams",
-      description: "Collaborate seamlessly. Share insights, build on each other's work, move faster together."
+      description: "Share, collaborate, and move faster together."
     },
     {
       icon: (
@@ -42,26 +42,8 @@ export function Product() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
         </svg>
       ),
-      title: "Amplify Expertise",
-      description: "AI that enhances human intelligence. Make better decisions faster without replacing your team."
-    },
-    {
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
-        </svg>
-      ),
-      title: "Seamless Integration",
-      description: "Connect with tools you already use. Google Suite, OneDrive, Dropbox, and more."
-    },
-    {
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-      ),
-      title: "Save Hours Daily",
-      description: "Stop searching, start delivering. Reclaim time for high-value strategic work."
+      title: "Enhances Expertise",
+      description: "AI that empowers consultants, not replaces them."
     }
   ]
 
@@ -75,8 +57,7 @@ export function Product() {
               Why Leading Firms Choose Lunon
             </h2>
             <p className="text-base md:text-lg text-slate-200 max-w-2xl md:mx-auto">
-              Transform scattered documents into your firm's competitive advantage. 
-              Lunon turns institutional knowledge into instant, actionable intelligence.
+              Turn scattered knowledge into your competitive advantage.
             </p>
           </div>
 
@@ -122,7 +103,7 @@ export function Product() {
           </div>
 
           {/* Desktop: Grid */}
-          <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
               <div 
                 key={index}
