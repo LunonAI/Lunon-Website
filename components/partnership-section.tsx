@@ -20,7 +20,7 @@ export function PartnershipSection() {
       return "h-17"; // 64px - bigger
     }
     if (name === "Confluence") {
-      return "h-7.5"; // 32px - smaller
+      return "h-6"; // smaller
     }
     return "h-9"; // 40px - default
   };
