@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description:
     "Empower your consulting firm with AI-driven insights. Upload documents, analyze data, and unlock intelligence with secure, enterprise-grade AI technology.",
   generator: "v0.app",
+  manifest: "/site.webmanifest",
   icons: {
     icon: [
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
