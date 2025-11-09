@@ -26,18 +26,18 @@ export function Navbar() {
               href="/"
               className="flex items-center group"
             >
-              <span className="text-3xl font-semibold text-slate-50 transition-colors group-hover:text-white flex items-center">
+              <span className="text-3xl font-semibold text-slate-50 transition-colors group-hover:text-white">
                 {/* "Lun" */}
                 <span>Lun</span>
                 
                 {/* Crescent Moon as "o" */}
-                <span className="relative inline-flex items-center justify-center">
+                <span className="relative inline-block translate-y-[3.5px]">
                   <svg
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
                     fill="none"
-                    className="transition-transform duration-300 group-hover:rotate-12"
+                    className="transition-transform duration-300 group-hover:rotate-12 block"
                   >
                     <path
                       d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
