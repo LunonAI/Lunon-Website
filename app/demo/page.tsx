@@ -185,7 +185,7 @@ export default function DemoPage() {
                 value={formData.fullName}
                 onChange={(e) => handleInputChange("fullName", e.target.value)}
                 aria-invalid={!!errors.fullName}
-                className="focus-visible:ring-[#522396]/30"
+                className="text-white focus-visible:ring-[#522396]/30"
               />
               {errors.fullName && (
                 <p className="text-sm text-destructive">{errors.fullName}</p>
@@ -204,7 +204,7 @@ export default function DemoPage() {
                 value={formData.email}
                 onChange={(e) => handleInputChange("email", e.target.value)}
                 aria-invalid={!!errors.email}
-                className="focus-visible:ring-[#522396]/30"
+                className="text-white focus-visible:ring-[#522396]/30"
               />
               {errors.email && (
                 <p className="text-sm text-destructive">{errors.email}</p>
@@ -223,7 +223,7 @@ export default function DemoPage() {
                 value={formData.company}
                 onChange={(e) => handleInputChange("company", e.target.value)}
                 aria-invalid={!!errors.company}
-                className="focus-visible:ring-[#522396]/30"
+                className="text-white focus-visible:ring-[#522396]/30"
               />
               {errors.company && (
                 <p className="text-sm text-destructive">{errors.company}</p>
@@ -241,7 +241,7 @@ export default function DemoPage() {
               >
                 <SelectTrigger
                   id="companySize"
-                  className={`w-full focus-visible:ring-[#522396]/30 ${
+                  className={`w-full text-white focus-visible:ring-[#522396]/30 ${
                     errors.companySize ? "border-destructive" : ""
                   }`}
                   aria-invalid={!!errors.companySize}
@@ -273,7 +273,7 @@ export default function DemoPage() {
                 placeholder="+1 (555) 123-4567"
                 value={formData.phone}
                 onChange={(e) => handleInputChange("phone", e.target.value)}
-                className="focus-visible:ring-[#522396]/30"
+                className="text-white focus-visible:ring-[#522396]/30"
               />
             </div>
 
@@ -289,7 +289,7 @@ export default function DemoPage() {
                 value={formData.message}
                 onChange={(e) => handleInputChange("message", e.target.value)}
                 aria-invalid={!!errors.message}
-                className="focus-visible:ring-[#522396]/30 resize-none"
+                className="text-white focus-visible:ring-[#522396]/30 resize-none"
               />
               {errors.message && (
                 <p className="text-sm text-destructive">{errors.message}</p>
@@ -307,7 +307,7 @@ export default function DemoPage() {
                 type="submit"
                 size="lg"
                 disabled={isSubmitting}
-                className="w-full bg-slate-700 text-slate-50 hover:bg-slate-600 shadow-lg hover:shadow-xl transition-all"
+                className="w-full bg-slate-600 text-slate-50 hover:bg-slate-700 shadow-lg hover:shadow-xl transition-all"
               >
                 {isSubmitting ? (
                   <>
