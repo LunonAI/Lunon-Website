@@ -79,7 +79,11 @@ export default function DemoPage() {
 
       if (!response.ok) {
         const errorData = await response.json()
-        throw new Error(errorData.error || 'Failed to submit demo request')
+        // Show more detailed error if available
+        const errorMsg = errorData.error || 'Failed to submit demo request'
+        const details = errorData.details ? `: ${errorData.details}` : ''
+        const hint = errorData.hint ? ` (${errorData.hint})` : ''
+        throw new Error(`${errorMsg}${details}${hint}`)
       }
 
       setIsSubmitted(true)
