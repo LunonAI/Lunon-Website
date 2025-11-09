@@ -42,9 +42,14 @@ export async function POST(request: NextRequest) {
     }
 
     // Send email using Resend
-    // Note: For production, you'll need to verify your domain with Resend
-    // Update the "from" address to use your verified domain (e.g., 'Lunon Website <noreply@lunon.ai>')
-    const fromEmail = process.env.RESEND_FROM_EMAIL || 'Lunon Website <onboarding@resend.dev>'
+    // Use RESEND_FROM_EMAIL from environment variables
+    const fromEmail = process.env.RESEND_FROM_EMAIL
+    if (!fromEmail) {
+      return NextResponse.json(
+        { error: 'RESEND_FROM_EMAIL is not configured' },
+        { status: 500 }
+      )
+    }
     
     // Escape HTML to prevent XSS in email content
     const escapeHtml = (text: string) => {
@@ -114,8 +119,22 @@ Reply directly to this email to respond to ${sanitizedFullName}.
 
     if (error) {
       console.error('Resend error:', error)
+      // Provide more specific error message
+      const errorMessage = error instanceof Error 
+        ? error.message 
+        : typeof error === 'object' && error !== null && 'message' in error
+        ? String(error.message)
+        : 'Failed to send email'
+      
       return NextResponse.json(
-        { error: 'Failed to send email' },
+        { 
+          error: 'Failed to send email',
+          details: errorMessage,
+          // Don't expose sensitive details in production, but helpful for debugging
+          hint: process.env.NODE_ENV === 'development' 
+            ? 'Check RESEND_API_KEY and domain verification in Resend dashboard'
+            : undefined
+        },
         { status: 500 }
       )
     }
@@ -126,8 +145,12 @@ Reply directly to this email to respond to ${sanitizedFullName}.
     )
   } catch (error) {
     console.error('API error:', error)
+    const errorMessage = error instanceof Error ? error.message : 'Internal server error'
     return NextResponse.json(
-      { error: 'Internal server error' },
+      { 
+        error: 'Internal server error',
+        details: process.env.NODE_ENV === 'development' ? errorMessage : undefined
+      },
       { status: 500 }
     )
   }
