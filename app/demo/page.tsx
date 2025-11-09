@@ -68,21 +68,30 @@ export default function DemoPage() {
     }
 
     setIsSubmitting(true)
+    setErrors((prev) => ({ ...prev, submit: "" }))
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    try {
+      const response = await fetch('/api/demo-request', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      })
 
-    // In production, you would send this to your backend:
-    // await fetch('/api/demo-request', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify(formData),
-    // })
+      if (!response.ok) {
+        const errorData = await response.json()
+        throw new Error(errorData.error || 'Failed to submit demo request')
+      }
 
-    console.log("Demo request submitted:", formData)
-
-    setIsSubmitting(false)
-    setIsSubmitted(true)
+      setIsSubmitted(true)
+    } catch (error) {
+      console.error('Error submitting demo request:', error)
+      setErrors((prev) => ({
+        ...prev,
+        submit: error instanceof Error ? error.message : 'Failed to submit demo request. Please try again.',
+      }))
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleInputChange = (
@@ -289,6 +298,11 @@ export default function DemoPage() {
 
             {/* Submit Button */}
             <div className="pt-4">
+              {errors.submit && (
+                <div className="mb-4 rounded-lg border border-destructive/50 bg-destructive/10 p-3">
+                  <p className="text-sm text-destructive">{errors.submit}</p>
+                </div>
+              )}
               <Button
                 type="submit"
                 size="lg"
