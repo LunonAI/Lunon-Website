@@ -125,9 +125,9 @@ function Planet() {
       <Html center distanceFactor={4} zIndexRange={[10, 0]}>
         <div className="relative">
           <svg
-            className="w-32 h-32 text-slate-100"
+            className="w-40 h-40 text-slate-100"
             style={{ 
-              filter: 'drop-shadow(0 0 14px rgba(59, 130, 246, 0.6))'
+              filter: 'drop-shadow(0 0 16px rgba(59, 130, 246, 0.7))'
             }}
             fill="none"
             stroke="currentColor"
@@ -294,11 +294,11 @@ function Scene() {
 export default function SecurityOrbital3D() {
   return (
     <div className="relative w-full max-w-[650px] mx-auto overflow-hidden" style={{ 
-      height: '650px',
-      maxHeight: '80vh' 
+      height: '600px',
+      maxHeight: '75vh' 
     }}>
       <Canvas
-        camera={{ position: [0, 3.5, 8], fov: 55 }}
+        camera={{ position: [0, 4, 8], fov: 55 }}
         style={{ 
           background: 'transparent', 
           width: '100%', 
