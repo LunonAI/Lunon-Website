@@ -293,14 +293,16 @@ function Scene() {
 
 export default function SecurityOrbital3D() {
   return (
-    <div className="relative w-full max-w-[650px] mx-auto overflow-visible" style={{ height: '650px' }}>
+    <div className="relative w-full max-w-[650px] mx-auto overflow-hidden" style={{ 
+      height: '650px',
+      maxHeight: '80vh' 
+    }}>
       <Canvas
         camera={{ position: [0, 3.5, 8], fov: 55 }}
         style={{ 
           background: 'transparent', 
           width: '100%', 
-          height: '100%',
-          overflow: 'visible'
+          height: '100%'
         }}
         dpr={[1, 2]}
         gl={{ 

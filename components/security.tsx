@@ -31,9 +31,9 @@ const complianceAreas = [
 
 export function Security() {
   return (
-    <section id="security" className="pt-16 md:pt-24 pb-8 md:pb-12 border-b border-slate-700/30">
+    <section id="security" className="pt-16 md:pt-24 pb-8 md:pb-12 border-b border-slate-700/30 overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="mx-auto max-w-6xl">
+        <div className="mx-auto max-w-6xl overflow-hidden">
           {/* Centered Section Title */}
           <div className="text-center mb-0">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-white mb-4">
@@ -83,7 +83,7 @@ export function Security() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-              className="relative overflow-visible"
+              className="relative overflow-visible max-w-full"
             >
               <Suspense fallback={
                 <div className="relative aspect-square max-w-[500px] mx-auto flex items-center justify-center">
