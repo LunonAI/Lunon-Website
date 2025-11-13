@@ -179,7 +179,7 @@ function Stars() {
   const positions = new Float32Array(count * 3)
   const sizes = new Float32Array(count)
   
-  // Distribute stars uniformly across full visible range
+  // Distribute stars uniformly across full visible range  
   for (let i = 0; i < count; i++) {
     const random = Math.random()
     positions[i * 3] = (Math.random() - 0.5) * 60          // X - very wide horizontal spread
