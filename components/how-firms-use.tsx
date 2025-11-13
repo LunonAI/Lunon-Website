@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import { motion } from "framer-motion"
 
 const useCases = [
   {
@@ -80,55 +79,32 @@ export function HowFirmsUse() {
           </div>
 
           {/* Desktop: 2x2 Grid with Minimalist Reveal */}
-          <div className="hidden md:grid md:grid-cols-2 border border-slate-600/40 rounded-2xl overflow-hidden bg-gradient-to-br from-slate-800/20 via-slate-900/40 to-slate-800/20 backdrop-blur-sm shadow-2xl">
+          <div className="hidden md:grid md:grid-cols-2 gap-4">
             {useCases.map((useCase, index) => (
-              <motion.div
-                key={index}
-                className={`
-                  group relative p-8 md:p-10
-                  transition-all duration-500 ease-out
-                  hover:bg-gradient-to-br hover:from-slate-700/20 hover:via-slate-800/30 hover:to-slate-700/20
-                  ${index === 0 ? 'border-r border-b border-slate-600/40' : ''}
-                  ${index === 1 ? 'border-b border-slate-600/40' : ''}
-                  ${index === 2 ? 'border-r border-slate-600/40' : ''}
-                `}
-                initial={{ 
-                  opacity: 0,
-                  y: 30
-                }}
-                whileInView={{ 
-                  opacity: 1,
-                  y: 0
-                }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ 
-                  duration: 1.2,
-                  delay: index < 2 ? 0 : 0.3,
-                  ease: [0.16, 1, 0.3, 1]
-                }}
-              >
-                {/* Moonlight glow on hover */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-400/5 via-slate-400/5 to-transparent" />
-                  <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-slate-400/30 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-slate-400/20 to-transparent" />
+              <div key={index} className="relative group">
+                <div
+                  className="relative rounded-2xl border border-slate-700/50 bg-gradient-to-br from-slate-800/40 via-slate-900/60 to-slate-800/40 p-8 md:p-10 shadow-2xl group-hover:border-white/30 transition-all duration-300"
+                  style={{boxShadow: 'var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)'}}
+                  onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 15px 0px rgba(255, 255, 255, 0.1)'}
+                  onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.25)'}
+                >
+                  {/* Top accent line */}
+                  <div className="absolute top-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-slate-500/50 to-transparent" />
+                  
+                  {/* Content */}
+                  <div className="relative z-10 space-y-4">
+                    <h3 className="text-xl md:text-2xl font-semibold tracking-tight text-white">
+                      {useCase.title}
+                    </h3>
+                    <p className="text-base md:text-lg text-slate-300 leading-relaxed">
+                      {useCase.description}
+                    </p>
+                  </div>
+                  
+                  {/* Bottom accent line */}
+                  <div className="absolute bottom-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-slate-600/40 to-transparent" />
                 </div>
-
-                {/* Content */}
-                <div className="relative z-10">
-                  <h3 className="text-xl md:text-2xl font-bold text-white mb-4 group-hover:text-slate-50 transition-colors">
-                    {useCase.title}
-                  </h3>
-                  <p className="text-sm md:text-base text-slate-300 leading-relaxed group-hover:text-slate-200 transition-colors">
-                    {useCase.description}
-                  </p>
-                </div>
-
-                {/* Subtle edge glow */}
-                <div className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                  <div className="absolute inset-0 shadow-[inset_0_0_20px_rgba(148,163,184,0.1)]" />
-                </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

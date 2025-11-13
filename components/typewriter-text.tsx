@@ -177,10 +177,10 @@ export function TypewriterText() {
               opacity: cursorVisible ? 1 : 0.2,
               verticalAlign: "-0.15em",
               display: 'inline-block',
-              marginLeft: isRetracting ? `calc(${(retractPosition / originalLength) * 100}% + 0.25rem)` : '0.25rem',
+              marginLeft: '0.25rem',
               position: isRetracting ? 'absolute' : 'relative',
-              left: isRetracting ? '0' : 'auto',
-              transition: isRetracting ? 'margin-left 30ms linear, opacity 300ms' : 'opacity 300ms',
+              left: isRetracting ? `calc(${(retractPosition / originalLength) * 100}% + 0.25rem)` : 'auto',
+              transition: isRetracting ? 'left 30ms linear, opacity 300ms' : 'opacity 300ms',
             }}
           />
         </span>

@@ -1,6 +1,5 @@
 "use client"
 
-import { motion } from "framer-motion"
 import dynamic from 'next/dynamic'
 import { Suspense } from 'react'
 
@@ -31,9 +30,9 @@ const complianceAreas = [
 
 export function Security() {
   return (
-    <section id="security" className="pt-16 md:pt-24 pb-8 md:pb-12 border-b border-slate-700/30 overflow-hidden">
+    <section id="security" className="pt-16 md:pt-24 pb-8 md:pb-12 border-b border-slate-700/30">
       <div className="container mx-auto px-4">
-        <div className="mx-auto max-w-6xl overflow-hidden">
+        <div className="mx-auto max-w-6xl">
           {/* Centered Section Title */}
           <div className="text-center mb-0">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-white mb-4">
@@ -43,15 +42,9 @@ export function Security() {
 
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left Side - Elevated Text Container */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className="relative"
-            >
+            <div className="relative group">
               {/* Main content container */}
-              <div className="relative rounded-2xl border border-slate-700/50 bg-gradient-to-br from-slate-800/40 via-slate-900/60 to-slate-800/40 p-8 md:p-10 lg:p-12 shadow-2xl">
+              <div className="relative rounded-2xl border border-slate-700/50 bg-gradient-to-br from-slate-800/40 via-slate-900/60 to-slate-800/40 p-8 md:p-10 lg:p-12 shadow-2xl group-hover:border-white/30 transition-all duration-300" style={{boxShadow: 'var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)'}} onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 15px 0px rgba(255, 255, 255, 0.1)'} onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.25)'}>
                 {/* Top accent line */}
                 <div className="absolute top-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-slate-500/50 to-transparent" />
                 
@@ -75,16 +68,10 @@ export function Security() {
                 {/* Bottom accent line */}
                 <div className="absolute bottom-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-slate-600/40 to-transparent" />
               </div>
-            </motion.div>
+            </div>
 
             {/* Right Side - 3D Orbital Security System */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-              className="relative overflow-visible max-w-full"
-            >
+            <div className="relative overflow-visible max-w-full">
               <Suspense fallback={
                 <div className="relative aspect-square max-w-[500px] mx-auto flex items-center justify-center">
                   <div className="w-[180px] h-[180px] rounded-full bg-gradient-to-br from-slate-700/40 via-slate-800/60 to-slate-900/80 border-2 border-slate-600/50 shadow-2xl animate-pulse" />
@@ -92,7 +79,7 @@ export function Security() {
               }>
                 <SecurityOrbital3D />
               </Suspense>
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>
