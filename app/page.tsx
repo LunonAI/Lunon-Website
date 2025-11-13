@@ -7,6 +7,7 @@ import { PartnershipSection } from "@/components/partnership-section"
 import { Product } from "@/components/product"
 import { BuiltBy } from "@/components/built-by"
 import { HowFirmsUse } from "@/components/how-firms-use"
+import { Security } from "@/components/security"
 import { Footer } from "@/components/footer"
 import { Starfield } from "@/components/starfield"
 import { ChevronRight } from "lucide-react"
@@ -113,6 +114,7 @@ export default function Home() {
         <div className="relative bg-slate-900">
           <Product />
           <HowFirmsUse />
+          <Security />
           <BuiltBy />
         </div>
       </main>
