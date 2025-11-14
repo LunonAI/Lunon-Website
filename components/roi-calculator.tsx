@@ -189,7 +189,7 @@ export function ROICalculator() {
             </div>
 
             {/* Bottom row - CTA section spanning left two columns */}
-            <div className="bg-gradient-to-r from-white/95 to-slate-50/95 backdrop-blur-sm border-t border-slate-200/50 p-6 lg:col-span-2 flex items-center justify-between">
+            <div className="bg-gradient-to-r from-white/95 to-slate-50/95 backdrop-blur-sm border-t border-slate-300 p-6 lg:col-span-2 flex items-center justify-between">
               <p className="text-slate-700 text-sm font-medium">
                 Unlock Generative AI and productivity for your team
               </p>
