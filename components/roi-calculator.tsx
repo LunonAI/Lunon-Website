@@ -3,12 +3,12 @@
 import { useState } from "react"
 
 export function ROICalculator() {
-  const [totalEmployees, setTotalEmployees] = useState(100)
+  const [totalEmployees, setTotalEmployees] = useState(70)
   const [adoptionRate, setAdoptionRate] = useState(80)
   const [hourlyRate, setHourlyRate] = useState(60)
   const [queriesPerDay, setQueriesPerDay] = useState<number | ''>(4)
   const [minutesSavedPerQuery, setMinutesSavedPerQuery] = useState<number | ''>(10)
-  const [searchesPerDay, setSearchesPerDay] = useState<number | ''>(2)
+  const [searchesPerDay, setSearchesPerDay] = useState<number | ''>(3)
   const [minutesSavedPerSearch, setMinutesSavedPerSearch] = useState<number | ''>(5)
 
   // Calculations
@@ -101,7 +101,7 @@ export function ROICalculator() {
             </div>
 
             {/* Middle Panel - Metrics */}
-            <div className="bg-white/95 backdrop-blur-sm p-8 lg:p-10 border-l border-slate-200/50">
+            <div className="bg-white/95 backdrop-blur-sm p-8 lg:p-10 border-l border-slate-300">
               {/* Answer Generation */}
               <div className="mb-6">
                 <div className="grid grid-cols-[140px_auto_1fr] gap-x-4 gap-y-2 items-start">
@@ -158,15 +158,11 @@ export function ROICalculator() {
 
               {/* Daily Time Savings */}
               <div>
-                <div className="flex items-start justify-between">
-                  <div>
-                    <h3 className="text-sm font-semibold text-slate-900">Daily Time Savings</h3>
-                    <p className="text-sm text-slate-900">per User</p>
-                  </div>
-                  <div className="text-xs">
-                    <span className="text-slate-900 font-bold text-base">{dailyTimeSavings.toFixed(1)}</span>
-                    <span className="text-slate-600 ml-1">hours per working day</span>
-                  </div>
+                <div className="grid grid-cols-[140px_auto_1fr] gap-x-4 gap-y-2 items-start">
+                  <h3 className="text-sm font-semibold text-slate-900 row-span-2 pt-1.5">Daily Time Savings</h3>
+                  <span className="text-sm font-medium text-slate-900 text-right pt-1.5">{dailyTimeSavings.toFixed(1)}</span>
+                  <span className="text-xs text-slate-600 pt-2">hours per working day</span>
+                  <p className="text-sm font-semibold text-slate-900 col-start-1">per User</p>
                 </div>
               </div>
             </div>
@@ -180,25 +176,15 @@ export function ROICalculator() {
               }} />
               
               <div className="relative z-10">
-                <div className="text-5xl md:text-6xl font-bold bg-gradient-to-br from-white via-green-50 to-green-100 bg-clip-text text-transparent mb-3">
+                <div className="text-4xl md:text-5xl font-bold bg-gradient-to-br from-white via-green-50 to-green-100 bg-clip-text text-transparent mb-3">
                   ${annualSavings.toLocaleString('en-US', { maximumFractionDigits: 0 })}
                 </div>
                 <div className="text-slate-300 text-lg font-medium mb-1">saved per year</div>
               </div>
               
-              <div className="text-slate-400 text-xs leading-relaxed relative z-10">
-                <div className="flex items-center gap-2 mb-1">
-                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <span>Based on estimated pricing</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-                  </svg>
-                  <span>For {activeUsers} users</span>
-                </div>
+              <div className="text-slate-400 leading-relaxed relative z-10 space-y-1">
+                <div className="text-sm font-medium">Based on estimated pricing</div>
+                <div className="text-sm font-medium">for {activeUsers} users</div>
               </div>
             </div>
 
@@ -209,7 +195,7 @@ export function ROICalculator() {
               </p>
               <button 
                 onClick={() => window.location.href = "/demo"}
-                className="glare-button bg-slate-50 text-slate-900 px-8 py-3 text-base font-semibold rounded-lg shadow-lg transition-all duration-200 hover:shadow-xl hover:bg-slate-200 border border-slate-200 hover:border-slate-400 cursor-pointer"
+                className="glare-button bg-slate-50 text-slate-900 px-8 py-3 text-base font-semibold rounded-lg shadow-lg transition-all duration-200 hover:shadow-xl hover:bg-slate-200 border border-slate-200 cursor-pointer"
                 style={{
                   '--gh-rgba': 'rgba(30, 41, 59, 0.4)',
                   '--gh-angle': '-45deg',
