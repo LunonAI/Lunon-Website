@@ -158,10 +158,10 @@ export function ROICalculator() {
 
               {/* Daily Time Savings */}
               <div>
-                <div className="grid grid-cols-[140px_auto_1fr] gap-x-4 gap-y-2 items-start">
+                <div className="grid grid-cols-[140px_auto_1fr] gap-x-4 gap-y-0.5 items-start">
                   <h3 className="text-sm font-semibold text-slate-900 row-span-2 pt-1.5">Daily Time Savings</h3>
-                  <span className="text-sm font-medium text-slate-900 text-right pt-1.5">{dailyTimeSavings.toFixed(1)}</span>
-                  <span className="text-xs text-slate-600 pt-2">hours per working day</span>
+                  <div className="w-8 min-w-8 text-center text-sm font-medium text-slate-900 pt-1.5 overflow-hidden">{dailyTimeSavings.toFixed(1)}</div>
+                  <span className="text-xs text-slate-600 pt-2 text-left">hours per working day</span>
                   <p className="text-sm font-semibold text-slate-900 col-start-1">per User</p>
                 </div>
               </div>
