@@ -295,14 +295,16 @@ export default function SecurityOrbital3D() {
   return (
     <div className="relative w-full max-w-[650px] mx-auto overflow-hidden" style={{ 
       height: '600px',
-      maxHeight: '75vh' 
+      maxHeight: '75vh',
+      pointerEvents: 'none'
     }}>
       <Canvas
         camera={{ position: [0, 4, 8], fov: 55 }}
         style={{ 
           background: 'transparent', 
           width: '100%', 
-          height: '100%'
+          height: '100%',
+          pointerEvents: 'none'
         }}
         dpr={[1, 2]}
         gl={{ 

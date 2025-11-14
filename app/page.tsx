@@ -7,7 +7,9 @@ import { PartnershipSection } from "@/components/partnership-section"
 import { Product } from "@/components/product"
 import { BuiltBy } from "@/components/built-by"
 import { HowFirmsUse } from "@/components/how-firms-use"
+import { ROICalculator } from "@/components/roi-calculator"
 import { Security } from "@/components/security"
+import { FAQ } from "@/components/faq"
 import { Footer } from "@/components/footer"
 import { Starfield } from "@/components/starfield"
 import { ChevronRight } from "lucide-react"
@@ -114,8 +116,10 @@ export default function Home() {
         <div className="relative bg-slate-900">
           <Product />
           <HowFirmsUse />
+          <ROICalculator />
           <Security />
           <BuiltBy />
+          <FAQ />
         </div>
       </main>
 
