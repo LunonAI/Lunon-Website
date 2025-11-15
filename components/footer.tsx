@@ -39,6 +39,9 @@ export function Footer() {
               <a href="/about" className="text-slate-400 transition-colors hover:text-slate-200">
                 About
               </a>
+              <a href="/manifesto" className="text-slate-400 transition-colors hover:text-slate-200">
+                Manifesto
+              </a>
               <a href="mailto:contact@lunon.ai" className="text-slate-400 transition-colors hover:text-slate-200">
                 Contact
               </a>

@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import { Plus } from "lucide-react"
 
 const faqs = [
   {
@@ -21,10 +20,6 @@ const faqs = [
     answer: "All data stays isolated in its own workspace with strict access controls, encrypted storage, and no cross firm data sharing. Nothing is used to train external models. Firms keep full ownership of everything they upload."
   },
   {
-    question: "How does Lunon’s business model scale across teams and clients?",
-    answer: "Lunon handles all types of consulting firm data including client documents, internal knowledge bases, research reports, financial models, presentations, and proprietary methodologies. The system can ingest structured and unstructured data from various sources like SharePoint, Confluence, file shares, and more to create a comprehensive knowledge repository."
-  },
-  {
     question: "How soon can our team experience Lunon in action?",
     answer: "You can test Lunon immediately through a demo or pilot, and onboarding takes about an hour. Teams begin producing client ready work the same day, with clear time savings and workflow improvements showing up within the first week."
   }
@@ -40,11 +35,11 @@ export function FAQ() {
   return (
     <section id="faq" className="pt-16 md:pt-24 pb-16 md:pb-24">
       <div className="container mx-auto px-4">
-        <div className="mx-auto max-w-3xl">
+        <div className="mx-auto max-w-5xl">
           {/* Section Title */}
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-white mb-4">
-              FAQ
+              Questions? We've Got Answers
             </h2>
           </div>
 
@@ -61,14 +56,23 @@ export function FAQ() {
                   onClick={() => toggleFAQ(index)}
                   className="w-full text-left px-6 md:px-8 py-6 flex items-start gap-4 group transition-colors"
                 >
-                  <Plus
-                    className={`h-6 w-6 text-slate-400 flex-shrink-0 transition-transform duration-300 mt-0.5 ${
-                      openIndex === index ? "rotate-45" : ""
-                    }`}
-                  />
-                  <span className="text-base md:text-lg font-semibold text-white flex-1">
+                  <span className="text-lg md:text-xl font-semibold text-white flex-1">
                     {faq.question}
                   </span>
+                  <div className="relative h-6 w-6 flex-shrink-0 mt-0.5">
+                    {/* Horizontal line - stays still */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-4 h-0.5 bg-slate-400 rounded-full" />
+                    </div>
+                    {/* Vertical line - rotates */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div 
+                        className={`w-0.5 h-4 bg-slate-400 rounded-full transition-transform duration-300 ease-in-out ${
+                          openIndex === index ? "-rotate-90" : "rotate-0"
+                        }`}
+                      />
+                    </div>
+                  </div>
                 </button>
                 
                 <div
@@ -79,8 +83,8 @@ export function FAQ() {
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <div className="px-6 md:px-8 pb-6 pl-[calc(1.5rem+1.5rem+1rem)] md:pl-[calc(2rem+1.5rem+1rem)]">
-                      <p className="text-sm md:text-base text-slate-400 leading-relaxed">
+                    <div className="px-6 md:px-8 pb-6 pr-[calc(1.5rem+1.5rem+1rem)] md:pr-[calc(2rem+1.5rem+1rem)]">
+                      <p className="text-sm md:text-base text-slate-300 leading-relaxed">
                         {faq.answer}
                       </p>
                     </div>
