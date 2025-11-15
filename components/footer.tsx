@@ -19,7 +19,7 @@ export function Footer() {
       
       <div className="mx-auto max-w-full px-6 lg:px-12 py-8">
         {/* Row 1: Logo, Nav Links, Privacy */}
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 pb-6">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 pb-6">
           {/* Logo - Far Left */}
           <a href="/" className="flex items-center group w-fit">
             <span className="text-3xl font-semibold text-slate-50 transition-colors group-hover:text-white">
@@ -71,7 +71,7 @@ export function Footer() {
         <div className="border-t border-slate-800/60" />
 
         {/* Row 2: Copyright, Social Icons */}
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 pt-6">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 pt-6">
           {/* Copyright - Left */}
           <p className="text-base text-slate-500">
             &copy; Lunon, Inc. 2025. All rights reserved.
