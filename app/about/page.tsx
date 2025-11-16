@@ -12,7 +12,7 @@ export default function AboutPage() {
   const [showCopied, setShowCopied] = useState(false)
 
   const copyEmail = () => {
-    navigator.clipboard.writeText("careers@lunon.ai")
+    navigator.clipboard.writeText("hello@lunon.ai")
     setShowCopied(true)
     setTimeout(() => setShowCopied(false), 2000)
   }
