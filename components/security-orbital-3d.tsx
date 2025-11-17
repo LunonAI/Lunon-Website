@@ -122,25 +122,36 @@ function Planet() {
       </mesh>
       
       {/* Shield icon overlay */}
-      <Html center distanceFactor={4} zIndexRange={[10, 0]}>
-        <div className="relative">
-          <svg
-            className="w-40 h-40 text-slate-100"
-            style={{ 
-              filter: 'drop-shadow(0 0 16px rgba(59, 130, 246, 0.7))'
-            }}
-            fill="none"
-            stroke="currentColor"
-            strokeWidth={2.5}
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"
-            />
-          </svg>
-        </div>
+      <Html 
+        center 
+        zIndexRange={[10, 0]} 
+        position={[0, 0, 0]}
+        style={{
+          width: '160px',
+          height: '160px',
+          transform: 'translate(-50%, -50%) scale(1)',
+          pointerEvents: 'none'
+        }}
+      >
+        <svg
+          width="160"
+          height="160"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={2.5}
+          style={{ 
+            filter: 'drop-shadow(0 0 16px rgba(59, 130, 246, 0.7))',
+            display: 'block',
+            color: '#e2e8f0'
+          }}
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"
+          />
+        </svg>
       </Html>
     </group>
   )
@@ -311,7 +322,7 @@ export default function SecurityOrbital3D() {
           antialias: true,
           alpha: true,
           powerPreference: 'high-performance',
-          preserveDrawingBuffer: true
+          preserveDrawingBuffer: false
         }}
         performance={{ min: 0.5 }}
       >
