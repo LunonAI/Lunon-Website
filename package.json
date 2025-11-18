@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "next build",
+    "build": "node scripts/generate-sitemap.js && next build",
     "dev": "next dev",
     "lint": "next lint",
     "start": "next start",
-    "deploy": "next build && powershell -Command \"New-Item -Path 'out/.nojekyll' -ItemType File -Force\" && gh-pages -d out --dotfiles --nojekyll"
+    "deploy": "node scripts/generate-sitemap.js && next build && powershell -Command \"New-Item -Path 'out/.nojekyll' -ItemType File -Force\" && gh-pages -d out --dotfiles --nojekyll"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
