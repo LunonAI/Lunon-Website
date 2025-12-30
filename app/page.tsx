@@ -26,7 +26,7 @@ export default function Home() {
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center pt-24 pb-20 overflow-hidden">
           <div className="w-full relative z-10">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="grid lg:grid-cols-[45%_55%] gap-8 items-center">
               {/* Left Column - Text Content */}
               <div className="space-y-8 text-left max-w-2xl px-6 lg:pl-12 lg:pr-0">
                 {/* Eyebrow - Creative Badge */}
@@ -94,7 +94,7 @@ export default function Home() {
               </div>
 
               {/* Right Column - Product Screenshot */}
-              <div className="pr-0 lg:pr-0">
+              <div className="lg:-mr-4 xl:-mr-8 overflow-visible">
                 <HeroImage />
               </div>
             </div>
