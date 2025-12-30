@@ -54,8 +54,8 @@ function SecurityStarfield() {
           style={{
             left: `${star.x}%`,
             top: `${star.y}%`,
-            width: star.size,
-            height: star.size,
+            width: `${star.size}px`,
+            height: `${star.size}px`,
             opacity: star.opacity,
           }}
         />
