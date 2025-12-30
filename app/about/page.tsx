@@ -17,51 +17,27 @@ export default function AboutPage() {
     setTimeout(() => setShowCopied(false), 2000)
   }
 
-  const leaders = [
+  const team = [
     {
       name: "Dhruv Shajikumar",
       role: "Chief Executive Officer",
       image: "/Dhruv.JPG",
-      bio: "Business student.",
+      bio: "Computational Finance",
       linkedin: "https://www.linkedin.com/in/dhruv-shajikumar/",
     },
     {
       name: "Connor Hyatt",
       role: "Chief Technology Officer",
       image: "/Connor.JPG",
-      bio: "Information Systems student.",
+      bio: "Information Systems & AI",
       linkedin: "https://www.linkedin.com/in/connorhyatt/",
     },
     {
       name: "Ryan Hyatt",
       role: "Chief Marketing Officer",
       image: "/Ryan.JPG",
-      bio: "Business student.",
+      bio: "Business & AI",
       linkedin: "https://www.linkedin.com/in/ryanhyatt222/",
-    },
-    {
-      name: "Keshav Vyas",
-      role: "Chief Product Officer",
-      image: "/Keshiv.JPG",
-      bio: "Business student.",
-      linkedin: "https://www.linkedin.com/in/keshavhvyas/",
-    },
-  ]
-
-  const teamMembers = [
-    {
-      name: "Hannah Wyatt",
-      role: "Creative Marketing Specialist",
-      image: "/Hannah.png",
-      bio: "Film student.",
-      linkedin: "https://www.linkedin.com/in/hannahwyattusa/",
-    },
-    {
-      name: "Osahan Belo-Osagie",
-      role: "Intern",
-      image: "/Osahan.JPG",
-      bio: "Business student.",
-      linkedin: "https://www.linkedin.com/in/osahonbelo-osagie/",
     },
   ]
 
@@ -119,124 +95,60 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              {/* Leadership Section */}
-              <div>
-                <div className="grid md:grid-cols-2 gap-6">
-                  {leaders.map((member, index) => (
-                    <div
-                      key={index}
-                      className="group flex gap-5 p-6 rounded-xl bg-slate-800 border border-slate-700/60 hover:border-slate-600 transition-all duration-300"
-                    >
-                      {/* Headshot */}
-                      <div className="flex-shrink-0">
-                        <div className="relative w-32 h-32 rounded-lg overflow-hidden border-2 border-slate-600 group-hover:border-slate-500 transition-all">
-                          <Image
-                            src={member.image}
-                            alt={member.name}
-                            width={128}
-                            height={128}
-                            className="w-full h-full object-cover"
-                            sizes="128px"
-                            priority
-                            loading="eager"
-                            placeholder="blur"
-                            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
-                          />
-                        </div>
-                      </div>
-
-                      {/* Info */}
-                      <div className="flex-1 min-w-0">
-                        <h3 className="text-xl font-semibold text-white mb-1">
-                          {member.name}
-                        </h3>
-                        <p className="text-slate-300 text-base font-medium mb-2">
-                          {member.role}
-                        </p>
-                        <p className="hidden md:block text-base text-slate-350 leading-relaxed mb-6" style={{ color: '#b0b8c3' }}>
-                          {member.bio}
-                        </p>
-                        
-                        {/* LinkedIn Link */}
-                        <a
-                          href={member.linkedin}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 text-base text-slate-300 hover:text-white transition-colors"
-                        >
-                          <svg
-                            className="w-4 h-4"
-                            fill="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                          </svg>
-                          <span>LinkedIn</span>
-                        </a>
+              {/* Team Grid */}
+              <div className="grid md:grid-cols-3 gap-6">
+                {team.map((member, index) => (
+                  <div
+                    key={index}
+                    className="group p-6 rounded-xl bg-slate-800 border border-slate-700/60 hover:border-slate-600 transition-all duration-300 text-center"
+                  >
+                    {/* Headshot */}
+                    <div className="flex justify-center mb-4">
+                      <div className="relative w-32 h-32 rounded-full overflow-hidden border-2 border-slate-600 group-hover:border-slate-500 transition-all">
+                        <Image
+                          src={member.image}
+                          alt={member.name}
+                          width={128}
+                          height={128}
+                          className="w-full h-full object-cover"
+                          sizes="128px"
+                          priority
+                          loading="eager"
+                          placeholder="blur"
+                          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+                        />
                       </div>
                     </div>
-                  ))}
-                </div>
-              </div>
 
-              {/* Team Members Section */}
-              <div className="mt-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  {teamMembers.map((member, index) => (
-                    <div
-                      key={index}
-                      className="group flex gap-5 p-6 rounded-xl bg-slate-800 border border-slate-700/60 hover:border-slate-600 transition-all duration-300"
+                    {/* Info */}
+                    <h3 className="text-xl font-semibold text-white mb-1">
+                      {member.name}
+                    </h3>
+                    <p className="text-slate-300 text-base font-medium mb-2">
+                      {member.role}
+                    </p>
+                    <p className="text-base leading-relaxed mb-4" style={{ color: '#b0b8c3' }}>
+                      {member.bio}
+                    </p>
+                    
+                    {/* LinkedIn Link */}
+                    <a
+                      href={member.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-base text-slate-300 hover:text-white transition-colors"
                     >
-                      {/* Headshot */}
-                      <div className="flex-shrink-0">
-                        <div className="relative w-32 h-32 rounded-lg overflow-hidden border-2 border-slate-600 group-hover:border-slate-500 transition-all">
-                          <Image
-                            src={member.image}
-                            alt={member.name}
-                            width={128}
-                            height={128}
-                            className="w-full h-full object-cover"
-                            sizes="128px"
-                            priority
-                            loading="eager"
-                            placeholder="blur"
-                            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
-                          />
-                        </div>
-                      </div>
-
-                      {/* Info */}
-                      <div className="flex-1 min-w-0">
-                        <h3 className="text-xl font-semibold text-white mb-1">
-                          {member.name}
-                        </h3>
-                        <p className="text-slate-300 text-base font-medium mb-2">
-                          {member.role}
-                        </p>
-                        <p className="hidden md:block text-base text-slate-350 leading-relaxed mb-6" style={{ color: '#b0b8c3' }}>
-                          {member.bio}
-                        </p>
-                        
-                        {/* LinkedIn Link */}
-                        <a
-                          href={member.linkedin}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 text-base text-slate-300 hover:text-white transition-colors"
-                        >
-                          <svg
-                            className="w-4 h-4"
-                            fill="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                          </svg>
-                          <span>LinkedIn</span>
-                        </a>
-                      </div>
-                    </div>
-                  ))}
-                </div>
+                      <svg
+                        className="w-4 h-4"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                      </svg>
+                      <span>LinkedIn</span>
+                    </a>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

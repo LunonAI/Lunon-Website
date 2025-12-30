@@ -17,7 +17,7 @@ export function BuiltBy() {
                 Engineered at Carnegie Mellon
               </h2>
               <p className="text-base md:text-lg text-slate-200">
-                Lunon was founded by Dhruv, Connor, Ryan, and Keshav, who first came together inside the world's leading AI research hub. Having worked in consulting, finance, and tech, we recognized that consultant firms were underserved by one-size-fits-all solutions. That pushed us toward a simple mission: build AI that reflects each firm's unique expertise so teams can work smarter, move faster, and deliver stronger results.
+                Lunon was founded by Dhruv, Connor, and Ryan, who first came together inside the world's leading AI research hub. Having worked in consulting, finance, and tech, we recognized that consultant firms were underserved by one-size-fits-all solutions. That pushed us toward a simple mission: build AI that reflects each firm's unique expertise so teams can work smarter, move faster, and deliver stronger results.
               </p>
               <div>
                 <button
