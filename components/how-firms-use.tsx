@@ -78,16 +78,11 @@ export function HowFirmsUse() {
             ))}
           </div>
 
-          {/* Desktop: 2x2 Grid with Minimalist Reveal */}
+          {/* Desktop: 2x2 Grid */}
           <div className="hidden md:grid md:grid-cols-2 gap-4">
             {useCases.map((useCase, index) => (
-              <div key={index} className="relative group">
-                <div
-                  className="relative rounded-2xl border border-slate-700/50 bg-gradient-to-br from-slate-800/40 via-slate-900/60 to-slate-800/40 p-8 md:p-10 shadow-2xl group-hover:border-white/30 transition-all duration-300"
-                  style={{boxShadow: 'var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)'}}
-                  onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 15px 0px rgba(255, 255, 255, 0.1)'}
-                  onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.25)'}
-                >
+              <div key={index} className="relative">
+                <div className="relative rounded-2xl border border-slate-700/50 bg-gradient-to-br from-slate-800/40 via-slate-900/60 to-slate-800/40 p-8 md:p-10 shadow-2xl">
                   {/* Top accent line */}
                   <div className="absolute top-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-slate-500/50 to-transparent" />
                   

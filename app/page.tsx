@@ -30,27 +30,21 @@ export default function Home() {
               {/* Left Column - Text Content */}
               <div className="space-y-8 text-left max-w-2xl px-6 lg:pl-12 lg:pr-0">
                 {/* Eyebrow - Creative Badge */}
-                <div className="inline-flex items-center gap-3 group">
-                  <div className="relative inline-flex items-center gap-3 rounded-full border border-slate-600/40 bg-gradient-to-r from-slate-800/80 via-slate-700/60 to-slate-800/80 backdrop-blur-xl px-5 py-2.5 shadow-2xl hover:shadow-slate-500/20 transition-all duration-300 hover:border-slate-500/60 cursor-pointer overflow-hidden">
-                    {/* Animated gradient overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-slate-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    
-                    {/* Profile Images with Animation */}
+                <div className="inline-flex items-center gap-3">
+                  <div className="relative inline-flex items-center gap-3 rounded-full border border-slate-600/40 bg-gradient-to-r from-slate-800/80 via-slate-700/60 to-slate-800/80 backdrop-blur-xl px-5 py-2.5 shadow-2xl overflow-hidden">
+                    {/* Profile Images */}
                     <div className="relative flex -space-x-3">
                       {['/professional-woman-glasses.png', '/professional-man.jpg', '/professional-woman-diverse.png'].map((src, index) => (
                         <div 
                           key={index}
-                          className="relative h-8 w-8 rounded-full border-2 border-slate-600 overflow-hidden bg-slate-700 ring-2 ring-slate-800/50 transform transition-transform duration-300 group-hover:scale-110"
-                          style={{ 
-                            animationDelay: `${index * 100}ms`,
-                            zIndex: 3 - index 
-                          }}
+                          className="relative h-8 w-8 rounded-full border-2 border-slate-600 overflow-hidden bg-slate-700 ring-2 ring-slate-800/50"
+                          style={{ zIndex: 3 - index }}
                         >
                           <img src={src} alt="" className="h-full w-full object-cover" />
                         </div>
                       ))}
                       {/* +Number indicator */}
-                      <div className="relative h-8 w-8 rounded-full border-2 border-slate-600 bg-gradient-to-br from-slate-600 to-slate-700 flex items-center justify-center ring-2 ring-slate-800/50 transform transition-transform duration-300 group-hover:scale-110">
+                      <div className="relative h-8 w-8 rounded-full border-2 border-slate-600 bg-gradient-to-br from-slate-600 to-slate-700 flex items-center justify-center ring-2 ring-slate-800/50">
                         <span className="text-[10px] font-bold text-slate-200">+50</span>
                       </div>
                     </div>
@@ -62,8 +56,7 @@ export default function Home() {
                       </span>
                     </div>
                     
-                    {/* Arrow with animation */}
-                    <ChevronRight className="h-4 w-4 text-slate-400 transform group-hover:translate-x-1 transition-transform duration-300" />
+                    <ChevronRight className="h-4 w-4 text-slate-400" />
                   </div>
                 </div>
 

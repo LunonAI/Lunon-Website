@@ -107,10 +107,10 @@ export function Product() {
             {benefits.map((benefit, index) => (
               <div 
                 key={index}
-                className="group p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/8 hover:border-white/20 transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 shadow-lg"
               >
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center text-slate-200 group-hover:bg-white/15 group-hover:text-white transition-all">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center text-slate-200">
                     {benefit.icon}
                   </div>
                   <div>

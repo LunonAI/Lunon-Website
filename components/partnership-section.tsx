@@ -33,12 +33,12 @@ export function PartnershipSection() {
           {partners.map((partner) => (
             <div
               key={partner.name}
-              className={`group ${partner.name === "InfoSys" ? "translate-y-0.5" : ""}`}
+              className={partner.name === "InfoSys" ? "translate-y-0.5" : ""}
             >
               <img
                 src={partner.logo}
                 alt={partner.name}
-                className={`w-auto opacity-80 group-hover:opacity-100 transition-opacity duration-300 brightness-0 invert group-hover:brightness-100 group-hover:invert-0 ${getLogoSize(partner.name)}`}
+                className={`w-auto opacity-80 brightness-0 invert ${getLogoSize(partner.name)}`}
               />
             </div>
           ))}
