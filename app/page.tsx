@@ -5,7 +5,6 @@ import { TypewriterText } from "@/components/typewriter-text"
 import { HeroImage } from "@/components/hero-image"
 import { PartnershipSection } from "@/components/partnership-section"
 import { Product } from "@/components/product"
-import { BuiltBy } from "@/components/built-by"
 import { HowFirmsUse } from "@/components/how-firms-use"
 import { ROICalculator } from "@/components/roi-calculator"
 import { Security } from "@/components/security"
@@ -111,7 +110,6 @@ export default function Home() {
           <HowFirmsUse />
           <ROICalculator />
           <Security />
-          <BuiltBy />
           <FAQ />
         </div>
       </main>
